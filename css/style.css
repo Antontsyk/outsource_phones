@@ -1633,6 +1633,7 @@ header.upakovka .container .span1_2 img {
 }
 .customers .container .customers_block .customers_img img {
   width: 100%;
+  display: block;
 }
 
 .work {
@@ -1673,6 +1674,7 @@ header.upakovka .container .span1_2 img {
   padding-top: 100%;
 }
 .work .work_block .span2 img {
+  display: block;
   width: 100%;
 }
 

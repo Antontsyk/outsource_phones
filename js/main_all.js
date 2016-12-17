@@ -22,7 +22,7 @@ $(document).ready(function () {
                     $(tabs).children("ul").children("li").eq(i).addClass("active");
                 }
 
-                showPage(0);				
+                showPage(0);
 
                 $(tabs).children("ul").children("li").each(function(index, element){
                     $(element).attr("data-page", i);
@@ -38,5 +38,13 @@ $(document).ready(function () {
     })(jQuery);
     $(document).ready(function(){
         $(".tabs").lightTabs();
+    });
+    $('.get_popup').click(function (e) {
+        e.preventDefault();
+        $('.popup').fadeIn(700);
+    });
+    $('.popup .close').click(function (e) {
+        e.preventDefault();
+        $('.popup').fadeOut(700);
     });
 });

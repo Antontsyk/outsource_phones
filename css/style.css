@@ -1075,6 +1075,26 @@ header.upakovka .container .span1_2:last-child img {
   height: 50px;
   cursor: pointer;
 }
+@media (max-width: 930px) {
+  .sec_tabs .tabs .filter .filter_logo .filter_logo_item {
+    width: 20%;
+  }
+}
+@media (max-width: 730px) {
+  .sec_tabs .tabs .filter .filter_logo .filter_logo_item {
+    width: 25%;
+  }
+}
+@media (max-width: 560px) {
+  .sec_tabs .tabs .filter .filter_logo .filter_logo_item {
+    width: 33.3%;
+  }
+}
+@media (max-width: 450px) {
+  .sec_tabs .tabs .filter .filter_logo .filter_logo_item {
+    width: 50%;
+  }
+}
 .sec_tabs .tabs .filter .filter_model {
   border-top: 1px solid #dcdcdc;
   margin-top: 20px;
@@ -1112,12 +1132,12 @@ header.upakovka .container .span1_2:last-child img {
     width: 33.3333%;
   }
 }
-@media (max-width: 555px) {
+@media (max-width: 650px) {
   .sec_tabs .tabs .tab_content .span1_4 {
     width: 50%;
   }
 }
-@media (max-width: 400px) {
+@media (max-width: 450px) {
   .sec_tabs .tabs .tab_content .span1_4 {
     width: 100%;
     margin: 0 auto;

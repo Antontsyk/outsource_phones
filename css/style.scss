@@ -362,6 +362,18 @@ header.upakovka {
       }
       .filter_logo {
         .filter_logo_item {
+          @include breakpoint((max-width: 930px)) {
+            width: 20%;
+          }
+          @include breakpoint((max-width: 730px)) {
+            width: 25%;
+          }
+          @include breakpoint((max-width: 560px)) {
+            width: 33.3%;
+          }
+          @include breakpoint((max-width: 450px)) {
+            width: 50%;
+          }
           width: 15%;
           float: left;
           height: 50px;
@@ -399,10 +411,10 @@ header.upakovka {
         @include breakpoint((max-width: 800px)) {
           width: 33.3333%;
         }
-        @include breakpoint((max-width: 555px)) {
+        @include breakpoint((max-width: 650px)) {
           width: 50%;
         }
-        @include breakpoint((max-width: 400px)) {
+        @include breakpoint((max-width: 450px)) {
           width: 100%;
           margin: 0 auto;
         }

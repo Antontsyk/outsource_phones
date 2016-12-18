@@ -16,10 +16,20 @@ $susy: (columns: 12, container: 1170px, gutters: 1/10, global-box-sizing: border
 @include border-box-sizing;
 $ell: #ffcc00;
 $ser: #a8acc0;
+
+%clear {
+  &:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
+
 html {
 }
 
 body {
+  overflow-x: hidden;
 }
 
 @font-face {
@@ -144,6 +154,10 @@ header {
     bottom: 0;
   }
   .head_middle {
+    @include breakpoint((max-width: 860px)) {
+      right: 10px;
+      left: inherit;
+    }
     position: absolute;
     top: 50%;
     left: 50%;
@@ -513,6 +527,14 @@ header.upakovka {
   .no_hidden {
     overflow: visible;
     .reviews_header {
+      @include breakpoint((max-width: 600px)) {
+        background: url(../images/corner.png) 100% 100% no-repeat;
+        width: 95%;
+        height: 250px;
+        margin: auto;
+        padding: 0 10px;
+        float: none;
+      }
       background: url('../images/corner.png') no-repeat;
       width: 299px;
       height: 250px;
@@ -585,9 +607,19 @@ header.upakovka {
 }
 
 .area {
+  @include breakpoint((max-width: 1190px)) {
+    padding-bottom: 120px;
+    margin-bottom: -100px;
+  }
+  @include breakpoint((max-width: 555px)) {
+    padding-bottom: 270px;
+    margin-bottom: -240px;
+    padding-top: 100px;
+    margin-top: -78px;
+  }
   background: url('../images/bg_black.png') 50% 50% no-repeat;
   background-size: cover;
-  height: 929px;
+  min-height: 929px;
   color: #fff;
   padding-top: 55px;
   .area_head {
@@ -610,16 +642,23 @@ header.upakovka {
     }
   }
   .span3 {
-    @include span(3 of 12);
+    @include breakpoint((max-width: 1190px)) {
+      width: 31.3%;
+    }
+    @include breakpoint((max-width: 860px)) {
+      width: 48%;
+    }
+    @include breakpoint((max-width: 555px)) {
+      width: 98%;
+    }
+    width: 23%;
+    float: left;
     border: 4px solid #626262;
-    width: 270px;
     height: 270px;
     text-align: center;
-    margin: 0 24px 25px 0;
+    margin: 15px 1%;
     cursor: pointer;
-    &:last-child {
-      @include span(3 of 12 last);
-    }
+    @extend %clear;
     p {
       color: #fff;
       text-transform: uppercase;
@@ -691,21 +730,27 @@ header.upakovka {
       background: #000;
     }
   }
-  .our_advantages_block {
-    .span4 {
-      @include span(4 of 12);
-      text-align: center;
-      margin-bottom: 30px;
-      &:last-child {
-        @include span(4 of 12 last);
-      }
-      p {
-        font-size: 15px;
-        line-height: 22px;
-        padding: 20px 0 10px;
-        width: 265px;
-        margin: 0 auto;
-      }
+
+  .span4 {
+    @include breakpoint((max-width: 800px)) {
+      width: 48%;
+    }
+    @include breakpoint((max-width: 555px)) {
+      width: 98%;
+    }
+    width: 31.3%;
+    height: 180px;
+    float: left;
+    margin: 20px 1%;
+    text-align: center;
+    margin-bottom: 30px;
+    @extend %clear;
+    p {
+      font-size: 15px;
+      line-height: 22px;
+      padding: 20px 0 10px;
+      width: 265px;
+      margin: 0 auto;
     }
   }
 }
@@ -721,6 +766,17 @@ header.upakovka {
       z-index: 3;
     }
     .experience_head {
+      @include breakpoint((max-width: 1024px)) {
+        position: absolute;
+        z-index: 4;
+        width: 60%;
+        top: 123px;
+        left: 33px;
+      }
+      @include breakpoint((max-width: 700px)) {
+        width: 89%;
+        left: 15px;
+      }
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -747,6 +803,13 @@ header.upakovka {
 }
 
 .cooperation {
+  @include breakpoint((max-width: 770px)) {
+     padding-top: 35px;
+   }
+  @include breakpoint((max-width: 555px)) {
+    padding-bottom: 111px;
+  }
+  @extend %clear;
   background: url('../images/bg_yellow.png') 50% 50% no-repeat;
   background-size: cover;
   min-height: 700px;
@@ -770,11 +833,20 @@ header.upakovka {
     }
   }
   .cooperation_block {
+    @extend %clear;
     .span6 {
+      @include breakpoint((max-width: 770px)) {
+        @include span(full);
+      }
       @include span(6 of 12);
       &:last-child {
+        @include breakpoint((max-width: 770px)) {
+          @include span(full);
+          margin-top: 25px;
+        }
         @include span(6 of 12 last);
       }
+      @extend %clear;
       .span6_head {
         font-size: 24px;
         font-family: Exo2-Black;
@@ -789,7 +861,7 @@ header.upakovka {
       .span6_txt {
         font-size: 15px;
         line-height: 23px;
-        width: 460px;
+        padding-right: 20px;
       }
     }
   }
@@ -893,15 +965,38 @@ header.upakovka {
     }
     .customers_block {
       .customers_slider {
+        @include breakpoint((max-width: 1200px)) {
+          width: 90%;
+          margin: 0 auto;
+        }
+        @include breakpoint((max-width: 730px)) {
+          width: 98%;
+        }
         width: 66%;
         float: left;
         .span1_5 {
+          @include breakpoint((max-width: 650px)) {
+            width: 25%;
+          }
+          @include breakpoint((max-width: 555px)) {
+            width: 33.33333%;
+          }
+          @include breakpoint((max-width: 370px)) {
+            width: 50%;
+          }
           width: 20%;
           float: left;
           height: 70px;
+          img{
+            display: block;
+            margin: 0 auto;
+          }
         }
       }
       .customers_img {
+        @include breakpoint((max-width: 1200px)) {
+          display: none;
+        }
         width: 33%;
         float: right;
         .block_hover {
@@ -952,7 +1047,17 @@ header.upakovka {
     }
   }
   .work_block {
+    @extend %clear;
     .span2 {
+      @include breakpoint((max-width: 750px)) {
+        width: 25%;
+      }
+      @include breakpoint((max-width: 650px)) {
+        width: 33.33333%;
+      }
+      @include breakpoint((max-width: 555px)) {
+        width: 50%;
+      }
       width: 20%;
       float: left;
       position: relative;
@@ -1001,17 +1106,32 @@ header.upakovka {
     .questions_block {
       text-align: center;
       .questions_img_left {
+        @include breakpoint((max-width: 650px)) {
+          display: none;
+        }
         display: inline-block;
         width: 30%;
         vertical-align: top;
       }
       form {
+        @include breakpoint((max-width: 650px)) {
+          width: 50%;
+          margin-left: 0;
+        }
+        @include breakpoint((max-width: 555px)) {
+          width: 95%;
+          margin: 0 auto 15px;
+        }
         display: inline-block;
-        width: 29%;
+        width: 300px;
         vertical-align: top;
         margin-left: 50px;
         input,
         textarea {
+          @include breakpoint((max-width: 555px)) {
+            width: 100%;
+            margin: 0 auto 15px;
+          }
           display: block;
           padding: 15px;
           font-size: 15px;
@@ -1025,7 +1145,14 @@ header.upakovka {
           height: 100px;
         }
         button {
-          background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAUgAAAA2CAYAAAClSwA2AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA6RJREFUeNrs3U1IFHEcxvFZi9BeTMOIgg69UoGHsMJEIqKOdShEMKRDVFSXIKOIQCoIpQIPFQYRRBS9UIeuRUFUQnoTKio7dAlB0uxlt6Ds+bn/3dad1XbXpdyd7wce0J1ZB34LDzPO7Exo6H6VlyPFSo1Sq6xQlipzlGnKTA8AcuuT8lXpVV4rL5QnyjMlkosNTB7n+0uUrUqDssGVJAD8CzNd5ikrE163cnyoXFfuKuFsNxDKcg+yTDmg7Fcq+JwATFB9ynmlTRnI9M1FWay/R+lRmilHABNcheuqd667Muq8TFZeonQo7cos5g4gj5S77upwXZbTgqxTupQ1zBlAHlvjuqwuVwV5WLmplDJbAAWg1HXa4fEW5BmlRQkxUwAFJOS67XS2BXlEOcgcARSwJtd1GRVkvXKK2QEIAOu6unQLcplymcNqAAE63L7kpTi7XZTi9yvKVGYGIEDsxM01ZdJYBbnb41IeAMG02ot+O/DPrmXCVw3tO412tTkXgQMIqn5lgRe9EcaIPch9lCOAgCt3XThiD9LuwvNemc18AASc3eBivhKJ7UFuphwBYJjd4GJL4iF2IzMBgLjGWEHa4fUm5gEAcRuVEivIGo87gQNAIuvEtVaQ65gFAPiss4KsZA4A4FNpBbmIOQCAz2IryLnMAQB8Kqwgy5gDAPjMsIKcwhwAIHVBAgBSoCABgIIEgMwL8gdjAACfz1aQA8wBAFIX5AfmAAA+fVaQPcwBAHzeWkF2MwcA8Om2gnzMHADA57EV5DMlwiwAIM46saPI/fCAeQBAnHViOHah+FXmAQBxw50YK8h7XvRRhwAQdH2uE+MFaYfZF5gLAAx3YSSxIE2b8pHZAAiwfteFXnJB2oJjzAdAgB13XegrSHNRec6MAARQl3Iu8YXkgvyl7FC+MSsAATKoNCg/xypI80rZqQwxMwABYF23S3mTvGC0G+beUJqZG4AAOKrcSrVgrDuKn1TOMjsABeyM0jLawr89cqFJOcLhNoACPKy2bjs01krpPJOmVan3ov/EBIB8N+g6rfVvK6b70K7byiqlk9kCyGOdrstup7NyJk81tDM81cpeL+FCSgDIAwOuu6q9FGerc1GQxq6TbFcWKic8bnABYGKzjjrpOqvddVjaQkP3q8az8RJlm7JdWa8U83kA+M++K4+Ua8odJZztHxpvQSaXZY1SqyxXlipzlOlKKZ8ZgByzky1flF7ltfJSeeoSzsUGfgswAF9RkE6QEF/yAAAAAElFTkSuQmCC') no-repeat;
+          @include breakpoint((max-width: 555px)) {
+            width: 100%;
+            margin: 0 auto;
+          }
+          background: #feba33;
+          -webkit-border-radius: 100px;
+          -moz-border-radius: 100px;
+          border-radius: 100px;
           width: 328px;
           height: 54px;
           border: none;
@@ -1036,11 +1163,11 @@ header.upakovka {
           box-shadow: 0 8px 58px -2px rgba(0, 0, 0, .5);
           border-radius: 25px;
           &:hover {
-            background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAUgAAAA2CAYAAAClSwA2AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA7pJREFUeNrs3U1IFHEcxvFZk9BefAlD6tChUioIDEpKokPHoA6BCIJ0iIrqkmYkEVlJYWTSocQgguiFSujgqUN0iFKowCCosOwagqTZixWkPT/3r2zOtu6uS7g73w88oDvD7vITHmbc2f+ERntqvRTJUSqUzcoapVQpVuYr+R4ApNZn5ZvSr/Qqr5UnSpfyI54nCJW1xtyePcM3mKvsVKqVra4kAeB/yHdZqqyLeNzK8ZFyW7mvjCT7AskWZIFySDmoFPF3AjCL2IHaNpcB5bJyURlK9Imykth/n9KnNFKOAGa5ItdVH1x3JdR5iexconQr7coi5g4gjRS67up2XZbSgqxUXijlzBlAGit3XVaZqoI8qtxV8pgtgAyQ5zrt6EwLskVpVkLMFEAGsU5rHntZdz7ZgmxQDjNHABmsXiXZkGhBVilnmR2AADirkqyMtyBXKdc4rQYQoNPtqyrJkukK0n6/rsxjZgACxD64uaWSnBOrIPd6XMoDIJg2eOFvB0YtSPtO4xlmBCDATuooMj9aQR7w+IYMgGArdF34V0Hal7trmQ0AeHU6isyJLMjtymLmAgDjC1zsiCzIGmYCAJPGOzE02lNrh5KDHovdAsAEW3R3kR1BVlCOAPAX68RNVpBbmAUA+GyxglzLHADAZ60V5ArmAAA+K60glzAHAPApsoIsYA4A4LPQCnIucwCA6AUJAIiCggQAChIAEi/IX4wBAHy+WEEOMQcAiF6QH5kDAPgMWEH2MQcA8HlvBfmKOQCAzysryMfMAQB8HltBdnnhxSEBAGHWid1Z7oeHzAMAJj0MlbWOTFwofoN5AMCk8U6cKMhOZYCZAMB4F3ZGFqSdZrcxFwDw2nR6/SOyIM1F5ROzARBgg64LvakFaRuOMx8AAXZKR4+D0QrSXFGeMSMAAfRCuRT5wNSCHFV2Kd+ZFYAAGVaqdfT4O1ZBmrfKbmWMmQEIAOu6PSrHd1M3/GvB3DtKI3MDEADHVI73om2ItaJ4k3KB2QHIYC0qx+Z/bZzulgv1SgOn2wAy8LS6QeV4JNZO8dyT5pxS5YX/iQkA6W7Yddq56XaM96ZdHcp65TmzBZDGnrsu64hn50Tuamif8GxU9nvhi8oBIF0Mue7a6LosLone9tWuk2xXliunPRa4ADC7WUc1uc5qdx0Wt2Tvi21tbJcBLVNqlAcei+4CmB1+uk6qcR11Itmz3uwZvpER5aZLrlKhbFZWK6VKsbJAyeNvBiDF7MOWr0q/0qu8UZ66jKTiBf4IMADPhqJV4EWQCwAAAABJRU5ErkJggg==') no-repeat;
+            background: #fecf71;
           }
           &:active,
           &:focus {
-            background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAUgAAAA2CAYAAAClSwA2AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA7dJREFUeNrs3UtIVHEYxuGjSWgXtTCkFi26UUGL0MJEXLQMahGIIEhgVFSbrigR2YVEqcBFhUEK0YVKaOGqhbSQSkh3QoVl2xAk7WoFZe8381cmzzTOjEM4c34PvKBzDjPDN/Byzsy5ZE20l3gpkquUKxXKRmWdUqwsVAo8AEitj8pXZVgZVF4qT5Xnyve4nqGuP+binFm+wTxlt1KjbHclCQD/Q4HLCmVzxONWjk+Ue8ojZTzZF0i2IAuVI8phpYjPCcAcYhtqO1xGlGtKqzKW6BNlJ7H+AWVIaaQcAcxxRa6r3rnuSqjzEll5rdKrtClLmTuANLLEdVev67KUFmSVYt9mbmXOANLYVtdlVakqyHrlgZLPbAFkgHzXafWzLcjLSrOSxUwBZJCsULd1lF5KtiAblOPMEUAGO6GSbEi0IKuVJmYHIACaVJJV8RbkeqWD3WoAAdrdvqmSXDtTQdr/t5QFzAxAgNgPN3dVkvNiFeR+j0N5AATTFi98dmDUgrRzGi8yIwABdlZbkQXRCvKQxxkyAIJtievCvwrSTu4+ymwAwDumrcjcyILcqSxjLgAQusDFrsiCrGUmADAl1IlZE+0ltik56nGxWwCYZBfdXWpbkOWUIwD8xTpxmxVkJbMAAJ9KK8hNzAEAfDZZQa5mDgDgs8YKcjlzAACfIivIQuYAAD6LrSDnMwcAiF6QAIAoKEgAoCABIPGC/MkYAMDnsxXkGHMAgOgF+Z45AIDPiBXkEHMAAJ+3VpADzAEAfAasIHuYAwD49FhBPvfCF4cEAIRZJ/Zmuz+6mQcATOn26vrHJw8Uv808AGBKqBMnC7JLGWEmABDqwq7IgrTd7OvMBQDUhXX93yML0rQqH5gNgAAbdV3oTS9IW3Ca+QAIsHPaehyNVpDmhvKCGQEIoH7lauQD0wvyt7JH+casAATIJ6VGW4+/YhWkea3sVSaYGYAAsK7bp3J8M33Bvy6Ye19pZG4AAuCUyvFhtAWxrih+QbnC7ABksMsqx+Z/LZzplgsnlAZ2twFk4G51g8rxZKyV4rknTYtS7YW/xASAdPfJdVrLTCvGe9OuTqVU6WO2ANJYn+uyznhWTuSuhvYLT5ly0AsfVA4A6WLMdVeZ67K4JHrbVztOsk1ZpZz3uMAFgLnNOuqC66w212FxS/a+2NbGdhjQSqVWeexx0V0Ac8MP10m1rqPOJLvXmzPLNzKu3HHJU8qVCmWDsk4pVhYp+XxmAFLMfmz5ogwrg8or5ZnLeCpe4I8AAwAF1ZtVsOZUxgAAAABJRU5ErkJggg==') no-repeat;
+            background: #ff9d33;
           }
         }
         p {

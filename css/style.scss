@@ -226,14 +226,20 @@ header {
         padding-bottom: 30px;
         margin-top: -20px;
         .back {
+          @include breakpoint((max-width: 800px)) {
+            left: 0;
+          }
           position: absolute;
           left: -20px;
           top: 77px;
-          background: url('../images/back.png') no-repeat;
+          background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAUCAYAAABWMrcvAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAANdJREFUeNqMk7sKAjEQRbMrCAoqKIKChZ9g4ZdaaqGdhQ8QCwtttNBCCwUtFG3s9RfiXTaB2SEZc+EUgRwyGWaU1loFUAIr0E3OIUIRbHWaD+j8EwpgrbOZS0LelERzAGVJWDDhBCq+P+XAhAkXULN3XMKYCTdQp/eoEIEhEx6gyauhQp8JL9By/dkKPSa8QdvX2ViliVQ22uAOKW/AXntK5VliMGLiHTQkydfyq9RyKk6ZeAZVSbJjtGTiURojaWD3yW6F7NKGibPQJdwZ4RuyhM51/wkwAL+xMDbWBrB+AAAAAElFTkSuQmCC') no-repeat;
           width: 13px;
           height: 20px;
         }
         a {
+          @include breakpoint((max-width: 800px)) {
+            padding-left: 15px;
+          }
           color: #fff;
           font-size: 16px;
           text-decoration: none;
@@ -243,7 +249,7 @@ header {
             color: #d4d4d4;
           }
           .back {
-            background: url('../images/back_hover.png') no-repeat;
+            background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAUCAYAAABWMrcvAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAATRJREFUeNqM008rhFEUx/F5LilKU2rKQjbKZhY2mqUFE0rZmIVkMTVNdt4BG6/AUtkoSmSKFMLKxoKShc3UbCgLecTCQpnxPXVunfT8O/VZ3HP7zXOfee4JwjDMZah+HGANd90ZAn04xQRKmHIpgV4ca0BqAOtJoR40UDa9W1RdQuAQs6Z3r+uvqFAX9jBveo+YwacsXERgFxXTe9IjvvuGDQXYxqLpNTXwZn/ZmcCWvKTZa2ESr//P7zSwibrpP8v3wEvUv2SfZKujcnEh2VzV9/E1jGsMJT1JgivYMXsjGhyMC0m1UcO+6Y3iCoW4kNQvlnFkekVc6r2LDPngkt5sX2O4QD4uJPWDBZyb3jjOZLaClCGUWTrRb+arkTZP33pxb3T9gQ2XYXIlOKdHncbDnwADAOPnOw29eEkmAAAAAElFTkSuQmCC') no-repeat;
           }
         }
         &:active {
@@ -251,7 +257,7 @@ header {
             color: #bfbfbf;
           }
           .back {
-            background: url('../images/back_pressed.png') no-repeat;
+            background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAUCAYAAABWMrcvAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAATdJREFUeNqEk0ErRUEUx91RirLxgbgeociGhR0LPgYbn8CSZMUCefVsWN6yYPEUisUTG4qSp2dhe/2OztO/a9w79es05/a7M3PmTJLneU/VyLJskHAAq2maNpMqCWGAcALD0IaxUCH0Exou2BiCtVAi9BHqMC7pC1gKJcIhTEn60uac6TNEhF7CHsxK+gYmETo2CRFhF+YlfWdbRHjvJoIICWEbFkS4d+FNfx5E2LRDyrdHqCG8FI8QXNiAFck/2X0gPMcK1d1eUsjnTnT8dISvtgXL8u0B0thqv22EaKvuwKJ8b8EI4mtUKpRcK3gLo1rBPw3r4j7MSfraK9mOStJGRzAj6abfWeffp+Fio9B/59ZOpe/J39Kx3Zmk66Xvia18eeOeeeoD1kPVU3dxGk5hgvnVtwADAK6IgaGQTKz6AAAAAElFTkSuQmCC') no-repeat;
           }
         }
       }
@@ -282,6 +288,9 @@ header {
 }
 
 header.upakovka {
+  @include breakpoint((max-width: 800px)) {
+    padding: 10px;
+  }
   background: url('../images/bg.jpg') 50% 50% no-repeat;
   background-size: cover;
   min-height: 600px;
@@ -291,16 +300,18 @@ header.upakovka {
     @include breakpoint((max-width: 1180px)) {
       padding-bottom: 0;
     }
-    .span1_2 {
+    .span1_2:first-child{
+      @include breakpoint((max-width: 800px)) {
+        width: 100%;
+      }
+    }
+    .span1_2:last-child{
+      @include breakpoint((max-width: 800px)) {
+        display: none;
+      }
       img {
         margin-bottom: -3px;
         width: 100%;
-        @include breakpoint((max-width: 880px)) {
-          position: absolute;
-          bottom: 0;
-          margin-bottom: 0;
-          width: 50%;
-        }
       }
     }
   }
@@ -1440,6 +1451,9 @@ footer {
     }
   }
   .box_cases_content {
+    @include breakpoint((max-width: 630px)) {
+      padding-bottom: 140px;
+    }
     .span1_2 {
       width: 50%;
       float: left;
@@ -1455,8 +1469,9 @@ footer {
       &:last-child {
         text-align: center;
         img {
+          @extend %clear;
           @include breakpoint((max-width: 630px)) {
-            width: 60%;
+            width: 95%;
           }
         }
       }
@@ -1500,11 +1515,8 @@ footer {
   background-size: cover;
   margin-top: -100px;
   padding-top: 50px;
-  @include breakpoint((max-width: 460px)) {
-    padding-top: 20px;
-  }
-  @include breakpoint((max-width: 430px)) {
-    padding-top: 0;
+  @include breakpoint((max-width: 630px)) {
+    margin-top: -150px;
   }
   @include breakpoint((max-width: 320px)) {
     padding-bottom: 20px;
@@ -1515,7 +1527,7 @@ footer {
   max-height: 300px;
   z-index: 0;
   //margin-top: 350px;
-  padding: 215px 0 40px;
+  //padding: 215px 0 40px;
   @include breakpoint((max-width: 1350px)) {
     padding: 0;
   }

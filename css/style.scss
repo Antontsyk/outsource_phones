@@ -759,6 +759,7 @@ header.upakovka {
   background: url('../images/bg_green.png') 50% 50% no-repeat;
   background-size: cover;
   height: 837px;
+  overflow: hidden;
   .container {
     display: flex;
     img {
@@ -893,6 +894,9 @@ header.upakovka {
   margin-top: -270px;
   padding-top: 290px;
   z-index: 1;
+  .container{
+    overflow: hidden;
+  }
   .novelty_head {
     text-align: center;
     h2 {

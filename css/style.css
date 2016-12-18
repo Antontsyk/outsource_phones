@@ -1475,6 +1475,7 @@ header.upakovka .container .span1_2 img {
   background: url("../images/bg_green.png") 50% 50% no-repeat;
   background-size: cover;
   height: 837px;
+  overflow: hidden;
 }
 .experience .container {
   display: -webkit-flex;
@@ -1631,6 +1632,9 @@ header.upakovka .container .span1_2 img {
   margin-top: -270px;
   padding-top: 290px;
   z-index: 1;
+}
+.novelty .container {
+  overflow: hidden;
 }
 .novelty .novelty_head {
   text-align: center;

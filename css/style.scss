@@ -1191,6 +1191,9 @@ header.upakovka {
 }
 
 footer {
+  @include breakpoint((max-width: 555px)) {
+    padding-bottom: 30px;
+  }
   background: url('../images/bg_black.png') 50% 50% no-repeat;
   background-size: cover;
   min-height: 190px;

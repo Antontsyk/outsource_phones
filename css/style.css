@@ -1954,6 +1954,11 @@ footer {
   margin-top: -100px;
   padding-top: 95px;
 }
+@media (max-width: 555px) {
+  footer {
+    padding-bottom: 30px;
+  }
+}
 footer .footer_left {
   font-size: 13px;
   color: #bcbcbc;

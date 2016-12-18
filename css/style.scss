@@ -383,7 +383,19 @@ header.upakovka {
     }
     .tab_content {
       margin-top: 60px;
+      @extend %clear;
       .span1_4 {
+        @include breakpoint((max-width: 800px)) {
+          width: 33.3333%;
+        }
+        @include breakpoint((max-width: 555px)) {
+          width: 50%;
+        }
+        @include breakpoint((max-width: 400px)) {
+          width: 100%;
+          margin: 0 auto;
+        }
+        @extend %clear;
         width: 25%;
         float: left;
         text-align: center;
@@ -1502,15 +1514,15 @@ footer {
 .footer_usluga {
   max-height: 300px;
   z-index: 0;
-  margin-top: 350px;
+  //margin-top: 350px;
   padding: 215px 0 40px;
   @include breakpoint((max-width: 1350px)) {
     padding: 0;
   }
-  @include breakpoint((max-width: 900px)) {
+  /*@include breakpoint((max-width: 900px)) {
     margin: 200px 0 0;
-  }
-  @include breakpoint((max-width: 630px)) {
+  }*/
+  /*@include breakpoint((max-width: 630px)) {
     margin: 235px 0 0;
   }
   @include breakpoint((max-width: 600px)) {
@@ -1533,7 +1545,7 @@ footer {
   }
   @include breakpoint((max-width: 320px)) {
     margin: 90px 0 0;
-  }
+  }*/
   .footer_left {
     @include breakpoint((max-width: 1350px)) {
       margin: 15px 0 15px 15px;

@@ -1640,6 +1640,10 @@ dop_service_line,
 
 .popup {
   display: none;
+  z-index: 20;
+  width: 100%;
+  height: 100%;
+  position: absolute;
   .in {
     position: fixed;
     top: 0;

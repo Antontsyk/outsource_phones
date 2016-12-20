@@ -91,4 +91,18 @@ $(document).ready(function () {
         e.preventDefault();
         $('.popup').fadeOut(700);
     });
+    $('.popup').click(function (event) {
+        var eventInMenu = $(event.target).parents('.popup .in .block');
+        if (!eventInMenu.length) {
+            $('.popup').fadeOut(300);
+        }
+    });
+    $(document).keydown(function(e) {
+        console.log(e);
+        if( e.keyCode === 27 ) {
+            $('.popup').fadeOut(300);
+            return false;
+        }
+    });
+
 });

@@ -21,7 +21,19 @@ $(document).ready(function () {
             }
         ]
     });
+    $(function(){
+       $('.slider_partners').slick({
+           slidesToShow: 1,
+           slidesToScroll: 1,
+           arrows: true
+           /*autoplay: true,
+           autoplaySpeed: 2000,*/
 
+       });
+        $('.slider_partners').on('mouseover','.span1_5',function () {
+            $('.customers_img img').attr('src',$(this).attr('data-UrlForBigImage'));
+        })
+    });
 
     (function ($) {
         jQuery.fn.lightTabs = function (options) {
@@ -68,7 +80,6 @@ $(document).ready(function () {
         }
     });
     $(document).keydown(function(e) {
-        console.log(e);
         if( e.keyCode === 27 ) {
             $('.popup').fadeOut(300);
             return false;

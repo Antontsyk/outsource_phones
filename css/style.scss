@@ -1031,11 +1031,39 @@ header.upakovka {
             margin: 0 auto;
           }
         }
+        .slick-prev,.slick-next{
+          width: 48px;
+          height: 48px;
+          background: #d9d9d9;
+          border-radius: 50%;
+          z-index: 5;
+          &:before{
+            font-size: 50px;
+            position: absolute;
+            top: -5px;
+            left: 50%;
+            margin-left: -7px;
+          }
+        }
+        .slick-prev {
+          left: -25px;
+          &:before {
+            content: '\2039';
+            margin-left: -9px;
+          }
+        }
+        .slick-next {
+          right: -25px;
+          &:before {
+            content: '\203A';
+          }
+        }
       }
       .customers_img {
         @include breakpoint((max-width: 1200px)) {
           display: none;
         }
+        position: relative;
         width: 33%;
         float: right;
         .block_hover {
@@ -1048,11 +1076,13 @@ header.upakovka {
           line-height: 26px;
           position: absolute;
           top: 50%;
-          margin: 0 auto;
+          left: 50%;
+          margin: -115px;
         }
         img {
-          width: 100%;
+          width: 90%;
           display: block;
+          margin: 0 auto;
         }
       }
     }

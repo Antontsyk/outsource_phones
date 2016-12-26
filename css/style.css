@@ -1750,6 +1750,9 @@ header.upakovka .container .span1_2:last-child img {
 .customers {
   margin-top: -70px;
 }
+.customers .container .customers_head {
+  margin-top: 120px;
+}
 .customers .container .customers_head h2 {
   font-size: 40px;
   font-family: Exo2-Black;
@@ -1760,7 +1763,7 @@ header.upakovka .container .span1_2:last-child img {
   width: 45px;
   height: 4px;
   background: #000;
-  margin-bottom: 30px;
+  margin-bottom: 65px;
 }
 .customers .container .slider_partners {
   margin: 20px 0 100px;
@@ -1783,11 +1786,12 @@ header.upakovka .container .span1_2:last-child img {
 .customers .container .customers_block .customers_slider .span1_5 {
   width: 20%;
   float: left;
-  height: 70px;
+  height: 100px;
 }
 @media (max-width: 650px) {
   .customers .container .customers_block .customers_slider .span1_5 {
     width: 25%;
+    height: 70px;
   }
 }
 @media (max-width: 555px) {

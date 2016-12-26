@@ -992,6 +992,7 @@ header.upakovka {
   margin-top: -70px;
   .container {
     .customers_head {
+      margin-top: 120px;
       h2 {
         font-size: 40px;
         font-family: Exo2-Black;
@@ -1002,7 +1003,7 @@ header.upakovka {
         width: 45px;
         height: 4px;
         background: #000;
-        margin-bottom: 30px;
+        margin-bottom: 65px;
       }
     }
     .slider_partners{
@@ -1022,6 +1023,7 @@ header.upakovka {
         .span1_5 {
           @include breakpoint((max-width: 650px)) {
             width: 25%;
+            height: 70px;
           }
           @include breakpoint((max-width: 555px)) {
             width: 33.33333%;
@@ -1031,7 +1033,7 @@ header.upakovka {
           }
           width: 20%;
           float: left;
-          height: 70px;
+          height: 100px;
           img{
             display: block;
             margin: 0 auto;

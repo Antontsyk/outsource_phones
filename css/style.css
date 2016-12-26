@@ -1820,6 +1820,7 @@ header.upakovka .container .span1_2:last-child img {
 .customers .container .customers_block .customers_slider .span1_5:hover {
   border: solid 1px #333;
   box-shadow: 0 0 10px -1px #333;
+  cursor: pointer;
 }
 .customers .container .customers_block .customers_slider .slick-prev, .customers .container .customers_block .customers_slider .slick-next {
   width: 48px;

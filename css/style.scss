@@ -152,6 +152,9 @@ header {
     position: absolute;
     left: 50%;
     bottom: 0;
+    &:hover{
+      cursor: pointer;
+    }
   }
   .head_middle {
     @include breakpoint((max-width: 860px)) {
@@ -1002,6 +1005,9 @@ header.upakovka {
         margin-bottom: 30px;
       }
     }
+    .slider_partners{
+      margin: 20px 0 100px;
+    }
     .customers_block {
       .customers_slider {
         @include breakpoint((max-width: 1200px)) {
@@ -1011,7 +1017,7 @@ header.upakovka {
         @include breakpoint((max-width: 730px)) {
           width: 98%;
         }
-        width: 66%;
+        width: 65%;
         float: left;
         .span1_5 {
           @include breakpoint((max-width: 650px)) {
@@ -1046,14 +1052,14 @@ header.upakovka {
           }
         }
         .slick-prev {
-          left: -25px;
+          left: -55px;
           &:before {
             content: '\2039';
             margin-left: -9px;
           }
         }
         .slick-next {
-          right: -25px;
+          right: -55px;
           &:before {
             content: '\203A';
           }
@@ -1064,9 +1070,18 @@ header.upakovka {
           display: none;
         }
         position: relative;
-        width: 33%;
+        width: 30%;
         float: right;
+        .imagesForPartners{
+          img{
+            //display: none;
+            &:first-child{
+              //display: block;
+            }
+          }
+        }
         .block_hover {
+          z-index: 3;
           background: #f1ad2a;
           font-size: 16px;
           width: 235px;
@@ -1080,7 +1095,7 @@ header.upakovka {
           margin: -115px;
         }
         img {
-          width: 90%;
+          width: 83%;
           display: block;
           margin: 0 auto;
         }

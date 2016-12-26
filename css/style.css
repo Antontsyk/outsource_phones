@@ -855,6 +855,9 @@ header .header_mouse {
   left: 50%;
   bottom: 0;
 }
+header .header_mouse:hover {
+  cursor: pointer;
+}
 header .head_middle {
   position: absolute;
   top: 50%;
@@ -1759,8 +1762,11 @@ header.upakovka .container .span1_2:last-child img {
   background: #000;
   margin-bottom: 30px;
 }
+.customers .container .slider_partners {
+  margin: 20px 0 100px;
+}
 .customers .container .customers_block .customers_slider {
-  width: 66%;
+  width: 65%;
   float: left;
 }
 @media (max-width: 1200px) {
@@ -1813,21 +1819,21 @@ header.upakovka .container .span1_2:last-child img {
   margin-left: -7px;
 }
 .customers .container .customers_block .customers_slider .slick-prev {
-  left: -25px;
+  left: -55px;
 }
 .customers .container .customers_block .customers_slider .slick-prev:before {
   content: '\2039';
   margin-left: -9px;
 }
 .customers .container .customers_block .customers_slider .slick-next {
-  right: -25px;
+  right: -55px;
 }
 .customers .container .customers_block .customers_slider .slick-next:before {
   content: '\203A';
 }
 .customers .container .customers_block .customers_img {
   position: relative;
-  width: 33%;
+  width: 30%;
   float: right;
 }
 @media (max-width: 1200px) {
@@ -1836,6 +1842,7 @@ header.upakovka .container .span1_2:last-child img {
   }
 }
 .customers .container .customers_block .customers_img .block_hover {
+  z-index: 3;
   background: #f1ad2a;
   font-size: 16px;
   width: 235px;
@@ -1849,7 +1856,7 @@ header.upakovka .container .span1_2:last-child img {
   margin: -115px;
 }
 .customers .container .customers_block .customers_img img {
-  width: 90%;
+  width: 83%;
   display: block;
   margin: 0 auto;
 }

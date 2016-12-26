@@ -1,4 +1,17 @@
 $(document).ready(function () {
+
+    $(function () {
+        var allHeight = $(window).height();
+        if ($(window).width() > 1024) {
+            $('header').css('min-height', allHeight);
+        }
+        $('.header_mouse').click(function () {
+            jQuery('html, body').animate({
+                scrollTop: allHeight
+            }, 700);
+        });
+    });
+
     $('.autoplay').slick({
         slidesToShow: 3,
         slidesToScroll: 1,
@@ -21,18 +34,41 @@ $(document).ready(function () {
             }
         ]
     });
-    $(function(){
-       $('.slider_partners').slick({
-           slidesToShow: 1,
-           slidesToScroll: 1,
-           arrows: true
-           /*autoplay: true,
-           autoplaySpeed: 2000,*/
+    $(function () {
+        $('.slider_partners').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: true
+            /*autoplay: true,
+             autoplaySpeed: 2000,*/
 
-       });
-        $('.slider_partners').on('mouseover','.span1_5',function () {
-            $('.customers_img img').attr('src',$(this).attr('data-UrlForBigImage'));
-        })
+        });
+        $('.imagesForPartners').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            fade: true,
+            cssEase: 'linear'
+            /*autoplay: true,
+             autoplaySpeed: 2000,*/
+
+        });
+        $('.slider_partners').on('mouseover', '.span1_5', function (e) {
+            e.preventDefault();
+            //e.stopPropagation();
+            var IdImg = $(this).attr('data-UrlForBigImage');
+            $('.imagesForPartners').slick('slickGoTo',IdImg)
+            /*$('.customers_img img').fadeOut(100, function () {
+             $('.customers_img img').fadeIn(100);
+             });*/
+            // $('.customers_img img').attr('src', $(this).attr('data-UrlForBigImage'))
+
+        });
+        $('.slider_partners').hover(function () {
+            $('.customers_img .block_hover').fadeOut(300);
+        }, function () {
+            $('.customers_img .block_hover').fadeIn(300);
+        });
     });
 
     (function ($) {
@@ -79,8 +115,8 @@ $(document).ready(function () {
             $('.popup').fadeOut(300);
         }
     });
-    $(document).keydown(function(e) {
-        if( e.keyCode === 27 ) {
+    $(document).keydown(function (e) {
+        if (e.keyCode === 27) {
             $('.popup').fadeOut(300);
             return false;
         }

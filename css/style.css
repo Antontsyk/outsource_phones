@@ -1787,6 +1787,15 @@ header.upakovka .container .span1_2:last-child img {
   width: 20%;
   float: left;
   height: 100px;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 @media (max-width: 650px) {
   .customers .container .customers_block .customers_slider .span1_5 {
@@ -1808,6 +1817,10 @@ header.upakovka .container .span1_2:last-child img {
   display: block;
   margin: 0 auto;
 }
+.customers .container .customers_block .customers_slider .span1_5:hover {
+  border: solid 1px #333;
+  box-shadow: 0 0 10px -1px #333;
+}
 .customers .container .customers_block .customers_slider .slick-prev, .customers .container .customers_block .customers_slider .slick-next {
   width: 48px;
   height: 48px;
@@ -1821,6 +1834,9 @@ header.upakovka .container .span1_2:last-child img {
   top: -5px;
   left: 50%;
   margin-left: -7px;
+}
+.customers .container .customers_block .customers_slider .slick-prev:hover, .customers .container .customers_block .customers_slider .slick-next:hover {
+  background: #dae6ec;
 }
 .customers .container .customers_block .customers_slider .slick-prev {
   left: -55px;

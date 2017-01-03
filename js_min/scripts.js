@@ -99,6 +99,7 @@ $(document).ready(function () {
             $('.customers_img .block_hover').fadeOut(300);
         }, function () {
             $('.customers_img .block_hover').fadeIn(300);
+            $('.imagesForPartners').slick('slickGoTo',0)
         });
     });
 

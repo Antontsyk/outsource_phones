@@ -1769,7 +1769,7 @@ header.upakovka .container .span1_2:last-child img {
   margin: 20px 0 100px;
 }
 .customers .container .customers_block .customers_slider {
-  width: 65%;
+  width: 69%;
   float: left;
 }
 @media (max-width: 1200px) {
@@ -1830,24 +1830,24 @@ header.upakovka .container .span1_2:last-child img {
   z-index: 5;
 }
 .customers .container .customers_block .customers_slider .slick-prev:before, .customers .container .customers_block .customers_slider .slick-next:before {
-  font-size: 50px;
+  font-size: 60px;
   position: absolute;
-  top: -5px;
+  top: -12px;
   left: 50%;
-  margin-left: -7px;
+  margin-left: -8px;
 }
 .customers .container .customers_block .customers_slider .slick-prev:hover, .customers .container .customers_block .customers_slider .slick-next:hover {
   background: #dae6ec;
 }
 .customers .container .customers_block .customers_slider .slick-prev {
-  left: -55px;
+  left: -30px;
 }
 .customers .container .customers_block .customers_slider .slick-prev:before {
   content: '\2039';
-  margin-left: -9px;
+  margin-left: -11px;
 }
 .customers .container .customers_block .customers_slider .slick-next {
-  right: -55px;
+  right: -30px;
 }
 .customers .container .customers_block .customers_slider .slick-next:before {
   content: '\203A';
@@ -1856,6 +1856,7 @@ header.upakovka .container .span1_2:last-child img {
   position: relative;
   width: 30%;
   float: right;
+  padding-left: 21px;
 }
 @media (max-width: 1200px) {
   .customers .container .customers_block .customers_img {
@@ -1876,7 +1877,7 @@ header.upakovka .container .span1_2:last-child img {
   line-height: 26px;
   position: absolute;
   top: 50%;
-  left: 50%;
+  left: 53%;
   margin: -40px 0 0 -124px;
 }
 .customers .container .customers_block .customers_img .block_hover .dop_arrow {

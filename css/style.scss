@@ -1018,7 +1018,7 @@ header.upakovka {
         @include breakpoint((max-width: 730px)) {
           width: 98%;
         }
-        width: 65%;
+        width: 69%;
         float: left;
         .span1_5 {
           @include breakpoint((max-width: 650px)) {
@@ -1054,25 +1054,25 @@ header.upakovka {
           border-radius: 50%;
           z-index: 5;
           &:before {
-            font-size: 50px;
+            font-size: 60px;
             position: absolute;
-            top: -5px;
+            top: -12px;
             left: 50%;
-            margin-left: -7px;
+            margin-left: -8px;
           }
           &:hover {
             background: #dae6ec;
           }
         }
         .slick-prev {
-          left: -55px;
+          left: -30px;
           &:before {
             content: '\2039';
-            margin-left: -9px;
+            margin-left: -11px;
           }
         }
         .slick-next {
-          right: -55px;
+          right: -30px;
           &:before {
             content: '\203A';
           }
@@ -1085,6 +1085,7 @@ header.upakovka {
         position: relative;
         width: 30%;
         float: right;
+        padding-left: 21px;
         .imagesForPartners {
           padding-top: 80px;
           img {
@@ -1105,7 +1106,7 @@ header.upakovka {
           line-height: 26px;
           position: absolute;
           top: 50%;
-          left: 50%;
+          left: 53%;
           margin: -40px 0 0 -124px;
           .dop_arrow{
             position: absolute;

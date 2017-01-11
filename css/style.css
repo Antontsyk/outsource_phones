@@ -1944,6 +1944,22 @@ header.upakovka .container .span1_2:last-child img {
 .work .work_block .span2:after {
   padding-top: 100%;
 }
+.work .work_block .span2:hover > .dop_info {
+  display: block;
+}
+.work .work_block .span2 .dop_info {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  background: rgba(0, 0, 0, 0.5);
+  text-align: center;
+  padding: 15px;
+  color: #fff;
+  font-size: 20px;
+}
 .work .work_block .span2 img {
   display: block;
   width: 100%;

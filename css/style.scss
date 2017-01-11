@@ -1169,6 +1169,24 @@ header.upakovka {
       &:after {
         padding-top: 100%;
       }
+      &:hover{
+        >.dop_info{
+          display: block;
+        }
+      }
+      .dop_info{
+        display: none;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+        background: rgba(0,0,0,.5);
+        text-align: center;
+        padding: 15px;
+        color: #fff;
+        font-size: 20px;
+      }
       img {
         display: block;
         width: 100%;

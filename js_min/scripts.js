@@ -95,7 +95,7 @@ $(document).ready(function () {
             // $('.customers_img img').attr('src', $(this).attr('data-UrlForBigImage'))
 
         });
-        $('.slider_partners').hover(function () {
+        $('.slider_partners .slick-slide').hover(function () {
             $('.customers_img .block_hover').fadeOut(300);
         }, function () {
             $('.customers_img .block_hover').fadeIn(300);

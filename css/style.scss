@@ -8,6 +8,7 @@
 @import "breakpoint";
 @import "_reset";
 @import "_normalize";
+@import "_animate";
 //@import "_slicknav";
 @import "_slickslider";
 //@import url(http://allfont.ru/allfont.css?fonts=open-sans);
@@ -1018,7 +1019,7 @@ header.upakovka {
         @include breakpoint((max-width: 730px)) {
           width: 98%;
         }
-        width: 69%;
+        width: 64%;
         float: left;
         .span1_5 {
           @include breakpoint((max-width: 650px)) {
@@ -1065,14 +1066,14 @@ header.upakovka {
           }
         }
         .slick-prev {
-          left: -30px;
+          left: -50px;
           &:before {
             content: '\2039';
             margin-left: -11px;
           }
         }
         .slick-next {
-          right: -30px;
+          right: -50px;
           &:before {
             content: '\203A';
           }

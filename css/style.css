@@ -4818,6 +4818,11 @@ header.upakovka .container .span1_2:last-child img {
   width: 20%;
   float: left;
   position: relative;
+  /*&:hover{
+    >.dop_info{
+      display: block;
+    }
+  }*/
 }
 @media (max-width: 750px) {
   .work .work_block .span2 {
@@ -4836,9 +4841,6 @@ header.upakovka .container .span1_2:last-child img {
 }
 .work .work_block .span2:after {
   padding-top: 100%;
-}
-.work .work_block .span2:hover > .dop_info {
-  display: block;
 }
 .work .work_block .span2 .dop_info {
   display: none;

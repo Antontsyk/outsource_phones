@@ -158,4 +158,9 @@ $(document).ready(function () {
     });
 
     new WOW().init();
+
+    $('.work_block .span2').hover(function () {
+        $(this).find('.dop_info').slideToggle();
+    });
+
 });

@@ -4319,32 +4319,13 @@ header.upakovka .container .span1_2:last-child img {
   line-height: 25px;
 }
 .area .span3 .area_img {
-  width: 150px;
+  width: 700px;
   height: 200px;
   margin: 0 auto;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  display: table-cell;
+  vertical-align: middle;
 }
 .area .span3 .area_img img {
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   margin: 0 auto;
 }
 .area .span3 .area_txt {

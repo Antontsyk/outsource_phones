@@ -706,19 +706,12 @@ header.upakovka {
       line-height: 25px;
     }
     .area_img {
-      width: 150px;
+      width: 700px;
       height: 200px;
       margin: 0 auto;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
+      display: table-cell;
+      vertical-align: middle;
       img {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
         margin: 0 auto;
       }
     }

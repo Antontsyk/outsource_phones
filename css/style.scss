@@ -162,12 +162,19 @@ header {
       right: 10px;
       left: inherit;
     }
+    @include breakpoint((max-width: 570px)) {
+      padding-left: 20px;
+      padding-top: 120px;
+    }
     position: absolute;
     top: 50%;
     left: 50%;
     text-transform: uppercase;
     transform: translateY(-60%);
     h1 {
+      @include breakpoint((max-width: 570px)) {
+        font-size: 35px;
+      }
       font-size: 44px;
       font-family: Exo2-Black;
       color: #fff;

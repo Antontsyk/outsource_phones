@@ -43,6 +43,12 @@ $(document).ready(function () {
             }, 700);
         });
     });
+	$(function(){
+		$('#main_header ul.menu').slicknav({
+			prependTo: "#main_header",
+			label: ""
+		});
+	});
 
     $('.autoplay').slick({
         slidesToShow: 3,

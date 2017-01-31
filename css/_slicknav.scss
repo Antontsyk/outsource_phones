@@ -10,6 +10,7 @@
 		margin-top: 0.188em;
 	}
 }
+
 .slicknav_menu {
 	*zoom: 1;
 	.slicknav_menutxt {
@@ -19,17 +20,18 @@
 	}
 	.slicknav_icon {
 		float: left;
-        width: 1.125em;
-        height: 0.875em;
+		width: 1.125em;
+		height: 0.875em;
 		margin: 0.188em 0 0 0.438em;
-        &:before { // Firefox Mobile v42 bugfix
-            background: transparent;
-            width: 1.125em;
-            height: 0.875em;
-            display: block;
-            content: "";
-            position: absolute;
-        }
+		&:before {
+			// Firefox Mobile v42 bugfix
+			background: transparent;
+			width: 1.125em;
+			height: 0.875em;
+			display: block;
+			content: "";
+			position: absolute;
+		}
 	}
 	.slicknav_no-text {
 		margin: 0;
@@ -55,6 +57,7 @@
 		clear: both;
 	}
 }
+
 .slicknav_nav {
 	clear: both;
 	ul {
@@ -83,6 +86,7 @@
 		display: inline;
 	}
 }
+
 .slicknav_brand {
 	float: left;
 }
@@ -94,14 +98,16 @@ $color_shadow: #000;
 $color_bg: #4c4c4c;
 $color_hover_bg: #f3c107;
 $color_hover_text: #222;
-
 .slicknav_menu {
-    max-width: 1000px;
-    margin: 0 auto;
+	@include breakpoint((max-width: 680px)) {
+		display: block;
+	}
+	display: none;
+	position: absolute;
+	top: 40px;
+	left: 0;
 	font-size: 16px;
 	box-sizing: border-box;
-    background: rgba(253, 202, 6, 0.5);
-	padding: 5px;
 	* {
 		box-sizing: border-box;
 	}
@@ -114,13 +120,15 @@ $color_hover_text: #222;
 		background-color: $color_text;
 	}
 }
+
 .slicknav_btn {
-	margin: 5px 5px 6px;
+	//margin: 5px 5px 6px;
 	text-decoration: none;
-	text-shadow: 0 1px 1px $color_0;	
+	text-shadow: 0 1px 1px $color_0;
 	border-radius: 4px;
 	background-color: $color_btn;
 }
+
 .slicknav_nav {
 	color: $color_text;
 	margin: 0;
@@ -137,7 +145,7 @@ $color_hover_text: #222;
 	.slicknav_row {
 		padding: 5px 10px;
 		margin: 2px 5px;
-		&:hover {			
+		&:hover {
 			border-radius: 6px;
 			background: $color_hover_bg;
 			color: $color_text;
@@ -148,9 +156,9 @@ $color_hover_text: #222;
 		margin: 2px 5px;
 		text-decoration: none;
 		color: $color_text;
-        text-transform: uppercase;
-        font-weight: bold;
-		&:hover {			
+		text-transform: uppercase;
+		font-weight: bold;
+		&:hover {
 			border-radius: 6px;
 			background: $color_hover_bg;
 			color: $color_hover_text;
@@ -168,6 +176,7 @@ $color_hover_text: #222;
 		margin: 0;
 	}
 }
+
 .slicknav_brand {
 	color: $color_text;
 	font-size: 18px;

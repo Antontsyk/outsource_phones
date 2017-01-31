@@ -3,11 +3,12 @@
 	display: block;
 	vertical-align: middle;
 	float: right;
-	padding: 0.438em 0.625em 0.438em 0.625em;
+	//padding: 0.438em 0.625em 0.438em 0.625em;
+	padding: 11px 13px 21px 11px;
 	line-height: 1.125em;
 	cursor: pointer;
 	.slicknav_icon-bar + .slicknav_icon-bar {
-		margin-top: 0.188em;
+		margin-top: 0.288em;
 	}
 }
 
@@ -20,8 +21,8 @@
 	}
 	.slicknav_icon {
 		float: left;
-		width: 1.125em;
-		height: 0.875em;
+		width: 2em;
+		height: 0.975em;
 		margin: 0.188em 0 0 0.438em;
 		&:before {
 			// Firefox Mobile v42 bugfix
@@ -38,13 +39,9 @@
 	}
 	.slicknav_icon-bar {
 		display: block;
-		width: 1.125em;
-		height: 0.125em;
-		-webkit-border-radius: 1px;
-		-moz-border-radius: 1px;
-		border-radius: 1px;
-		-webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
-		-moz-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
+		width: 100%;
+		height: 5px;
+		border-radius: 10px;
 		box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
 	}
 	&:before {
@@ -92,7 +89,7 @@
 }
 
 $color_0: rgba(255, 255, 255, 0.75);
-$color_btn: #f9d445;
+$color_btn: #ffcc00;
 $color_text: #000;
 $color_shadow: #000;
 $color_bg: #4c4c4c;
@@ -104,10 +101,12 @@ $color_hover_text: #222;
 	}
 	display: none;
 	position: absolute;
-	top: 40px;
+	top: 10%;
 	left: 0;
 	font-size: 16px;
 	box-sizing: border-box;
+	background-color: #ffcc00;
+	border-radius: 0 5px 5px 0;
 	* {
 		box-sizing: border-box;
 	}
@@ -126,6 +125,8 @@ $color_hover_text: #222;
 	text-decoration: none;
 	text-shadow: 0 1px 1px $color_0;
 	border-radius: 4px;
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
 	background-color: $color_btn;
 }
 
@@ -158,10 +159,16 @@ $color_hover_text: #222;
 		color: $color_text;
 		text-transform: uppercase;
 		font-weight: bold;
+		border-bottom: solid 1px #000;
 		&:hover {
 			border-radius: 6px;
 			background: $color_hover_bg;
 			color: $color_hover_text;
+		}
+	}
+	li:last-child{
+		a{
+			border-bottom: 0;
 		}
 	}
 	.slicknav_txtnode {

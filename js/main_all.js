@@ -2,9 +2,9 @@ $(document).ready(function () {
 
     $(function () {
         var allHeight = $(window).height();
-        if ($(window).width() > 1024) {
+
             $('#main_header').css('min-height', allHeight);
-        }
+
         $('.header_mouse').click(function () {
             jQuery('html, body').animate({
                 scrollTop: allHeight

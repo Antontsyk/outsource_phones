@@ -100,8 +100,9 @@ $color_hover_text: #222;
 		display: block;
 	}
 	display: none;
+	z-index: 1;
 	position: absolute;
-	top: 10%;
+	top: 18%;
 	left: 0;
 	font-size: 16px;
 	box-sizing: border-box;

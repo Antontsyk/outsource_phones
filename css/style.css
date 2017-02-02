@@ -3684,8 +3684,9 @@ th {
 
 .slicknav_menu {
   display: none;
+  z-index: 1;
   position: absolute;
-  top: 10%;
+  top: 18%;
   left: 0;
   font-size: 16px;
   box-sizing: border-box;
@@ -3845,6 +3846,11 @@ header {
   padding: 30px;
   position: relative;
 }
+@media (max-width: 730px) {
+  header {
+    min-height: 510px;
+  }
+}
 header figure {
   float: left;
   margin: 0 50px 0 0;
@@ -3957,7 +3963,8 @@ header .head_middle {
 @media (max-width: 570px) {
   header .head_middle {
     padding-left: 20px;
-    padding-top: 120px;
+    /*padding-top: 120px;*/
+    margin-top: 35px;
     width: 100%;
   }
 }
@@ -4371,6 +4378,11 @@ header.upakovka .container .span1_2:last-child img {
 .reviews {
   padding: 60px 0;
 }
+@media (max-width: 600px) {
+  .reviews {
+    padding-top: 10px;
+  }
+}
 .reviews .no_hidden {
   overflow: visible;
 }
@@ -4385,7 +4397,7 @@ header.upakovka .container .span1_2:last-child img {
   .reviews .no_hidden .reviews_header {
     background: url(../images/corner.png) 100% 100% no-repeat;
     width: 95%;
-    height: 250px;
+    height: 100px;
     margin: auto;
     padding: 0 10px;
     float: none;

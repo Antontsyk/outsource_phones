@@ -4493,6 +4493,9 @@ header.upakovka .container .span1_2:last-child img {
   background: #fff;
 }
 .area .span3 {
+  /*@include breakpoint((max-width: 555px)) {
+  	width: 98%;
+  }*/
   width: 23%;
   float: left;
   border: 4px solid #626262;
@@ -4509,11 +4512,8 @@ header.upakovka .container .span1_2:last-child img {
 @media (max-width: 860px) {
   .area .span3 {
     width: 48%;
-  }
-}
-@media (max-width: 555px) {
-  .area .span3 {
-    width: 98%;
+    margin: 10px 1%;
+    height: 290px;
   }
 }
 .area .span3 p {
@@ -4522,6 +4522,11 @@ header.upakovka .container .span1_2:last-child img {
   font-size: 18px;
   font-weight: bold;
   line-height: 25px;
+}
+@media (max-width: 860px) {
+  .area .span3 p {
+    font-size: 16px;
+  }
 }
 .area .span3 .area_img {
   width: 700px;
@@ -4581,6 +4586,9 @@ header.upakovka .container .span1_2:last-child img {
   background: #000;
 }
 .our_advantages .span4 {
+  /*@include breakpoint((max-width: 555px)) {
+  	width: 98%;
+  }*/
   width: 31.3%;
   height: 180px;
   float: left;
@@ -4593,17 +4601,19 @@ header.upakovka .container .span1_2:last-child img {
     width: 48%;
   }
 }
-@media (max-width: 555px) {
-  .our_advantages .span4 {
-    width: 98%;
-  }
-}
 .our_advantages .span4 p {
   font-size: 15px;
   line-height: 22px;
   padding: 20px 0 10px;
   width: 265px;
   margin: 0 auto;
+}
+@media (max-width: 800px) {
+  .our_advantages .span4 p {
+    width: auto;
+    font-size: 3.7vw;
+    line-height: 20px;
+  }
 }
 
 .experience {
@@ -4831,6 +4841,11 @@ header.upakovka .container .span1_2:last-child img {
 }
 .customers .container .customers_head {
   margin-top: 120px;
+}
+@media (max-width: 730px) {
+  .customers .container .customers_head {
+    margin-top: -50px;
+  }
 }
 .customers .container .customers_head h2 {
   font-size: 40px;

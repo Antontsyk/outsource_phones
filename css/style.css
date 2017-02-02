@@ -4479,8 +4479,6 @@ header.upakovka .container .span1_2:last-child img {
 }
 @media (max-width: 555px) {
   .area {
-    padding-bottom: 270px;
-    margin-bottom: -240px;
     padding-top: 100px;
     margin-top: -78px;
   }
@@ -4581,7 +4579,7 @@ header.upakovka .container .span1_2:last-child img {
 }
 
 .our_advantages {
-  padding: 45px 0 20px;
+  padding: 0 0 20px;
 }
 .our_advantages .our_advantages_top {
   margin-bottom: 50px;

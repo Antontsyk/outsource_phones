@@ -671,8 +671,8 @@ header.upakovka {
 		margin-bottom: -100px;
 	}
 	@include breakpoint((max-width: 555px)) {
-		padding-bottom: 270px;
-		margin-bottom: -240px;
+		//padding-bottom: 270px;
+		//margin-bottom: -240px;
 		padding-top: 100px;
 		margin-top: -78px;
 	}
@@ -772,7 +772,7 @@ header.upakovka {
 }
 
 .our_advantages {
-	padding: 45px 0 20px;
+	padding: 0 0 20px;
 	.our_advantages_top {
 		margin-bottom: 50px;
 		h2 {

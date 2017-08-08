@@ -773,6 +773,9 @@ header.upakovka {
 
 .our_advantages {
 	padding: 0 0 20px;
+	.slick-dots{
+		bottom: -15px;
+	}
 	.our_advantages_top {
 		margin-bottom: 50px;
 		h2 {
@@ -801,6 +804,10 @@ header.upakovka {
 		text-align: center;
 		margin-bottom: 30px;
 		@extend %clear;
+		img{
+			display: block;
+			margin: 0 auto;
+		}
 		p {
 			@include breakpoint((max-width: 800px)) {
 				width: auto;
@@ -1179,6 +1186,9 @@ header.upakovka {
 		}
 	}
 	.work_block {
+		.slick-dots{
+			bottom: -25px;
+		}
 		@extend %clear;
 		.span2 {
 			@include breakpoint((max-width: 750px)) {
@@ -1223,6 +1233,12 @@ header.upakovka {
 }
 
 .questions {
+	@include breakpoint((max-width: 750px)) {
+		margin-top: 0;
+		padding-top: 15px;
+		background-size: inherit;
+		background: url(../images/bg_form.png) -496px -103px no-repeat;
+	}
 	background: url('../images/bg_form.png') 50% 50% no-repeat;
 	background-size: cover;
 	min-height: 820px;

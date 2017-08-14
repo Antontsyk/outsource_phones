@@ -34,8 +34,13 @@ $(document).ready(function () {
 
     $(function () {
         var allHeight = $(window).height();
-
+        if ($(window).width() > 700) {
             $('#main_header').css('min-height', allHeight);
+        }else{
+            var reviews = $('.reviews');
+            $('.reviews').remove();
+            $('.sliderModileReview').append(reviews);
+        }
 
         $('.header_mouse').click(function () {
             jQuery('html, body').animate({
@@ -43,13 +48,23 @@ $(document).ready(function () {
             }, 700);
         });
     });
-	$(function(){
-		$('#main_header ul.menu').slicknav({
-			prependTo: "#main_header",
-			label: ""
-		});
-	});
-    if($(window).width()<767){
+    $(window).scroll(function () {
+        if($(window).scrollTop() > 1){
+            $('.mobileHeader').addClass('white');
+        }else{
+            $('.mobileHeader').removeClass('white');
+        }
+    });
+    $('.mobileHeader .btnNav').click(function () {
+        $(this).parents('.mobileHeader').toggleClass('chowNavModile');
+    });
+    $(function () {
+        /*$('#main_header ul.menu').slicknav({
+            prependTo: "#main_header",
+            label: ""
+        });*/
+    });
+    if ($(window).width() < 767) {
         $('.work_block').slick({
             slidesToShow: 1,
             slidesToScroll: 1,
@@ -91,7 +106,7 @@ $(document).ready(function () {
         ]
     });
     $(function () {
-        $('.slider_partners').slick({
+        $('.slider_partners .slideItem').slick({
             slidesToShow: 1,
             slidesToScroll: 1,
             arrows: true
@@ -114,7 +129,7 @@ $(document).ready(function () {
             e.preventDefault();
             //e.stopPropagation();
             var IdImg = $(this).attr('data-UrlForBigImage');
-            $('.imagesForPartners').slick('slickGoTo',IdImg)
+            $('.imagesForPartners').slick('slickGoTo', IdImg)
             /*$('.customers_img img').fadeOut(100, function () {
              $('.customers_img img').fadeIn(100);
              });*/
@@ -125,7 +140,7 @@ $(document).ready(function () {
             $('.customers_img .block_hover').fadeOut(300);
         }, function () {
             $('.customers_img .block_hover').fadeIn(300);
-            $('.imagesForPartners').slick('slickGoTo',0)
+            $('.imagesForPartners').slick('slickGoTo', 0)
         });
     });
 

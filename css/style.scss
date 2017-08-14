@@ -75,6 +75,9 @@ header {
 	padding: 30px;
 	position: relative;
 	figure {
+		@include breakpoint((max-width: 700px)) {
+			display: none;
+		}
 		float: left;
 		margin: 0 50px 0 0;
 		@include breakpoint((max-width: 1200px)) {
@@ -115,6 +118,9 @@ header {
 		}
 	}
 	.head_contacts {
+		@include breakpoint((max-width: 700px)) {
+			display: none;
+		}
 		float: right;
 		div {
 			display: inline-block;
@@ -155,6 +161,9 @@ header {
 		}
 	}
 	.header_mouse {
+		@include breakpoint((max-width: 700px)) {
+			display: none;
+		}
 		position: absolute;
 		left: 50%;
 		bottom: 0;
@@ -308,6 +317,32 @@ header {
 	}
 }
 
+.mobileHeader{
+	position: fixed;
+	height: 41px;
+	width: 100%;
+	background: transparent;
+	top: 0;
+	left: 0;
+	.tnbPhone{
+		width: 40px;
+		height: 40px;
+		outline: 0;
+		border: 0;
+		background: #fb3;
+		border-radius: 50%;
+		text-align: center;
+		line-height: 40px;
+		position: relative;
+		&:after{
+			content: '';
+			display: block;
+			background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAMAAAD04JH5AAAAA3NCSVQICAjb4U/gAAAACXBIWXMAAF9yAABfcgED+1HJAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAnNQTFRF////AQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACAQACKhAJIAAAANB0Uk5TAAECAwQFBgcICQsMDQ4PEBESExQVFhcYGRobHB0eHyAiIyQlJicoKSorLC0uLzM0NTY3OTs8Pj9AQkNERUZHSEpLTU5QUVJTVFVWV1hZWltcXV5iY2RlZmdqa2xucXJzdXZ3eHl6e3x9f4CBg4SHiImKjY6QkZKTlZiZmpudnp+goaKjpKaoqausrq+xsrO0tba4ubq8vb/BwsPExcbIycrMzc7P0NHS09XW19ja29zd3t/g4eLj5OXm5+jp6uvt7u/w8fLz9PX29/j5+/z9/qBJVBsAAAQJSURBVBgZxcEJW1RlGAbgp8NmIpkKQWKaC4gbaovVWLYZ5lIZlmiLZbmUZilmqUVubWaSmbml4QKapk1oGaKGAyrgjDPPT8quiEtgznfO8M77cd9APOO2BS9uDaDHvBHlTdGF6CGvsM189Ig5Mba58Rh6wPNRtmssgnUlEd6iNhuWPRFmBz9lwKpAKzvZApsevMYulsKeCU3sKjYdtuQ3MJ6WibBkB+OrHwQrSummJhMW9LlMV5UO9M2jwWroO0KTMmgrplEkAGXraRYqgCqniR6C/aFpBD3tTYei6fS2AYpW0Ie3oaeSPsRKoOZP+tFcDCV30p+6gdAxhj4d7Q0VI+nXNgcahtO3VdAwhP7NgYKB9K8lH8l3FxPwKZKvHxNwAsmXxQRcQvLdzgRsh4IG+vcMFBykbx9Cw2f0KbLUgYaF9Kf2fuh4mr58kQUlufThain0nKKnQ8OgaB09RD9Ig6bnaFb3CHTl0ejUAGg7QYPWsVC3jAZfQ99IGrwMC47T3VxYsITulsOCYXRXARt+pqvdsGE2XUUGw4L0erpaDRuW0dXVvrAgN0xXb8GGLXR1qR8smEB3FbBhJ909DAvG092pDFjwDd2tgAWjonQVK4EFW+iuuRj6hkbori4f+tbRoLo31GVfpsG3DtTNo0k51DmHaFIGdcVRGkQCULeWJqFCaOt7kSbBAdBWSqP96dD2A402Q9vdDTRaAm3TaRSbAW2badQyEcqyztLowj1QNilKo+N9oGwlzXakQFd6Dc3WQFnBFZrNh7ISmt2YAmUradY0CrpSdtPsTA5cOaVfHfhkMmSyz9Hs13y4yDnKf32cBpGJYZqdHY64Mg/zP5sgM48eLoxDHGk7+b/FkNlAD6EH0NUmtos9C5FeVfTQPAWdvc9btEyASE4tPYRno6NX2cH5QRApvEwv63vhFtOi7KgmEyIPhemlZjjaTbrOzrY7EHmBnq7MQpvRIXZVDpkl9FY5NQ033XuO8ZRBpoI+/P3R1BcrwowrEoBI6i4KhQohknWMQsH+EMk5SaF96RDJO02hjZDJr6XQIsgM/oMysWmQGfoXZVrGQ2ZEPWXO50Om6BJlqjMhM+IMZbY7kMk7RplyCN2xhzJzIZSxlSKRAISctRQJFUBqKUWC/SE14xol9qZDanSQEhsh1vd7SsyCmPNejN33eyrkpl5h9xUgCYbuZ7dNRjI4C1rZTblIjsIqdst+JEvK4jAT1zAEyVO0i4mqHoukeuo0ExF+JxVJlragkb4dHgMF2Wua6cv1RanQMWB5A71VFUFP5uvnaNb6ZgpUpT75ZSvdHSyAvqyX9oQZ15GZDuzIuO+1z39jR43fPQq7+j3+buW+A1WHq385+eOqmcNuQ3z/AMqZu21BE7sqAAAAAElFTkSuQmCC') no-repeat;
+			width: 10px;
+			height: 10px;
+		}
+	}
+}
 header.upakovka {
 	@include breakpoint((max-width: 800px)) {
 		padding: 10px;
@@ -772,6 +807,12 @@ header.upakovka {
 }
 
 .our_advantages {
+	.slick-slide img{
+		margin: 0 auto;
+	}
+	.slick-dots li button:before{
+		border-radius: 50%;
+	}
 	padding: 0 0 20px;
 	.slick-dots{
 		bottom: -15px;
@@ -935,6 +976,14 @@ header.upakovka {
 		}
 	}
 	.callback {
+		@include breakpoint((max-width: 700px)) {
+			width: 90%;
+			background-size: contain;
+			height: 48px;
+			margin: 20px auto 0;
+			padding-top: 0;
+			line-height: 49px;
+		}
 		background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAUgAAAA2CAYAAAClSwA2AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA4ZJREFUeNrs3c1LVGEYxuEzBpEWpmJIixZhigXuVExEon0tCgkqV2WQbQoVLYJo00qoTbWoTZR9Sf0FUSB9QOlKqFBrUYsQBE2L0aCm+3HOGWbmjDmOYzpzfhfcKI7MwCPcvK9n5j2hSCTiZMkmpUlpVvYo1UqFslnZ6gBAdn1XfioTyqjyXnmpvFbmsvECoRUWZKFySDmq7HdLEgDWkpXjc+W+8lQJ/++CLFHOKmeUcv4eANapSeW6ck2ZXu2CLFDalStKGbMHkCOmlPPKLeXPahRklXJPaWDWAHLUW+W4MpbuijAdrcoQ5QggxzW4XdaarYLsUR4pxcwWQB4odjutZ6Vb7D6lk3kCyFPWcd2ZrCB7KUcAea7L7bplrSCPKA/sceYHIM9F3M4bSKcga5RhpYi5AQiIGaXOSbq6XZBiy32HcgQQMHbhpl/Z8K+CPOXwVh4AwVTvRD8dmHKLbQdKfHb4hAyA4LJP3Ox0ogdhJKwgOyhHAAFX6nZhwgrSTuH5omxjPgACzg642KHMeSvIA5QjACywE8oOxm+x25gJAMS0eVts215PORx2CwAeO3S3zFaQTZQjACSwTtxrBdnCLADAp8UKspY5AIBPrRVkJXMAAJ9dVpDbmQMA+JTbVex5fbORWQBAglkryAhzAAC/AkYAABQkAFCQAJCtgvzFGADAZ9YKcpo5AEDqgvzGHADAZ9IK8hNzAACfcSvIEeYAAD4jVpCDzAEAfAY5MBcA/GIH5to3z5gHAMRYJ4a9N4rfZR4AELPQifG3ff3qRO/mBQBB5rvtq22zbzAXAFjowrn4FaQpVcaVMuYDIKDsgnWl+zXhsAr7wUXmAyDALnvlmLyC9ArzjdLAnAAEzJDSqPxerCBNjTKsFDEvAAExo9QpY8krxmQflRMKt2IAEATWde3J5bhYQZqHyiXmBiAALiiPUz0QWuKeXX1KJ/MDkKes47oXe3CpWy50Kb1stwHk4ba691/lmM4K0tOq3FaKmSuAHGcXZE4qA0v9YmgZt8WuUvqVeuYLIEe9U445KS7IZLLFjmdPaO8ROu3EvZESAHLAtNtdjemW43JXkPFKlHNKh8MBFwDWLzt44qZyNZOFXaYF6SlUDrtL1n0Oh+4CWHvzygsn+i/BJ0o40ydaaUEml2WT0qzsVqqVCmWLw8UdANlnF1t+KBPKqPJBeeUmnI0X+CvAAMVLzG6XTFxTAAAAAElFTkSuQmCC') no-repeat;
 		width: 328px;
 		height: 54px;
@@ -1010,9 +1059,20 @@ header.upakovka {
 		}
 	}
 	.span4 {
+		@include breakpoint((max-width: 700px)) {
+			width: 100%;
+		}
 		@include span(4 of 12);
 		text-align: center;
+		&.first{
+			@include breakpoint((max-width: 700px)) {
+				display: none;
+			}
+		}
 		&:last-child {
+			@include breakpoint((max-width: 700px)) {
+				display: none;
+			}
 			@include span(4 of 12 last);
 		}
 	}
@@ -1756,7 +1816,7 @@ h2 {
 .our_advantages_line,
 .experiance_line,
 .cooperation_line,
-.novelty_line,
+/*.novelty_line,*/
 .customers_line,
 .work_line,
 .questions_line,
@@ -1788,6 +1848,7 @@ dop_service_line,
 		.block {
 			@include breakpoint((max-width: 700px)) {
 				width: 75%;
+				background: #fff;
 			}
 			@include breakpoint((max-width: 520px)) {
 				width: 100%;
@@ -1801,6 +1862,7 @@ dop_service_line,
 			.title {
 				@include breakpoint((max-width: 700px)) {
 					font-size: 30px;
+					color: #000;
 				}
 				text-transform: uppercase;
 				color: #fff;

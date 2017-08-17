@@ -51,8 +51,10 @@ $(document).ready(function () {
     $(window).scroll(function () {
         if($(window).scrollTop() > 1){
             $('.mobileHeader').addClass('white');
+            $('.mobileHeader .logoMobile img').attr('src', 'images/logoMobileScroll.png');
         }else{
             $('.mobileHeader').removeClass('white');
+            $('.mobileHeader .logoMobile img').attr('src', 'images/logoMobile.png');
         }
     });
     $('.mobileHeader .btnNav').click(function () {

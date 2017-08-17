@@ -1,8 +1,11 @@
-var http = require('http');
+var express = require('express');
+var app = express();
+var path = require('path');
+/*app.set("public", path.join(__dirname));*/
+app.use(express.static(path.join(__dirname, './')));
+// viewed at http://localhost:8080
+app.get('/', function(req, res) {
+    res.sendFile(path.join(__dirname + '/index.html'));
+});
 
-http.createServer(function (req, res) {
-    res.writeHead(200, {'Content-Type': 'text/plain'});
-    res.render('index.html');
-}).listen(8080);
-
-console.log('Server running on port 8080.');
+app.listen(8081);

@@ -37,7 +37,7 @@ $(document).ready(function () {
         }
     });
     $('.mobileHeader .btnNav').click(function () {
-        $(this).parents('.mobileHeader').toggleClass('chowNavModile');
+        $(this).parents('.mobileHeader').toggleClass('chowNavModile whiteTop');
     });
 
     $(window).click(function (event) {

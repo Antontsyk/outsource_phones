@@ -414,6 +414,26 @@ header {
       }
     }
   }
+  &.whiteTop{
+    background: #fff;
+    box-shadow: 0 5px 13px rgba(0, 0, 0, 0.4);
+    .btnNav {
+      &:after {
+        color: #000;
+      }
+    }
+    .logoMobileTop{
+      display: none;
+    }
+    .logoMobileScroll{
+      display: block;
+    }
+    .tel {
+      a {
+        color: #000;
+      }
+    }
+  }
   &.white {
     background: #fff;
     box-shadow: 0 5px 13px rgba(0, 0, 0, 0.4);

@@ -4559,6 +4559,11 @@ header.upakovka .container .span1_2:last-child img {
     height: 290px;
   }
 }
+@media (max-width: 700px) {
+  .area .span3 {
+    height: 170px;
+  }
+}
 .area .span3 p {
   color: #fff;
   text-transform: uppercase;
@@ -4571,6 +4576,12 @@ header.upakovka .container .span1_2:last-child img {
     font-size: 16px;
   }
 }
+@media (max-width: 700px) {
+  .area .span3 p {
+    font-size: 12px;
+    line-height: 14px;
+  }
+}
 .area .span3 .area_img {
   width: 700px;
   height: 200px;
@@ -4578,12 +4589,30 @@ header.upakovka .container .span1_2:last-child img {
   display: table-cell;
   vertical-align: middle;
 }
+@media (max-width: 700px) {
+  .area .span3 .area_img {
+    height: 100px;
+  }
+}
 .area .span3 .area_img img {
   margin: 0 auto;
 }
+@media (max-width: 700px) {
+  .area .span3 .area_img img {
+    height: 60%;
+  }
+}
 .area .span3 .area_txt {
+  line-height: 22px;
+  margin-top: 10px;
   font-size: 15px;
   display: none;
+}
+@media (max-width: 700px) {
+  .area .span3 .area_txt {
+    font-size: 13px;
+    line-height: 17px;
+  }
 }
 .area .span3:hover {
   background: #fff;
@@ -4603,9 +4632,6 @@ header.upakovka .container .span1_2:last-child img {
 .area .span3:hover .area_txt {
   display: block;
   color: #000;
-  line-height: 22px;
-  margin-top: 10px;
-  font-size: 15px;
 }
 .area .span3:active, .area .span3:focus {
   background: #dcdcdc;

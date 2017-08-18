@@ -928,6 +928,10 @@ header.upakovka {
       margin: 10px 1%;
       height: 290px;
     }
+    @include breakpoint((max-width: 700px)) {
+      height: 170px;
+    }
+
     /*@include breakpoint((max-width: 555px)) {
         width: 98%;
     }*/
@@ -943,6 +947,10 @@ header.upakovka {
       @include breakpoint((max-width: 860px)) {
         font-size: 16px;
       }
+      @include breakpoint((max-width: 700px)) {
+        font-size: 12px;
+        line-height: 14px;
+      }
       color: #fff;
       text-transform: uppercase;
       font-size: 18px;
@@ -950,16 +958,28 @@ header.upakovka {
       line-height: 25px;
     }
     .area_img {
+      @include breakpoint((max-width: 700px)) {
+        height: 100px;
+      }
       width: 700px;
       height: 200px;
       margin: 0 auto;
       display: table-cell;
       vertical-align: middle;
       img {
+        @include breakpoint((max-width: 700px)) {
+          height: 60%;
+        }
         margin: 0 auto;
       }
     }
     .area_txt {
+      @include breakpoint((max-width: 700px)) {
+        font-size: 13px;
+        line-height: 17px;
+      }
+      line-height: 22px;
+      margin-top: 10px;
       font-size: 15px;
       display: none;
     }
@@ -978,9 +998,6 @@ header.upakovka {
       .area_txt {
         display: block;
         color: #000;
-        line-height: 22px;
-        margin-top: 10px;
-        font-size: 15px;
       }
     }
     &:active,

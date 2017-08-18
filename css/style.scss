@@ -72,6 +72,7 @@ header {
   @include breakpoint((max-width: 730px)) {
     min-height: 350px;
     background: url('../images/headerFonMobile.jpg') 50% 50% no-repeat;
+    background-size: cover;
   }
   background: url('../images/BG_all.jpg') 50% 50% no-repeat;
   background-size: cover;
@@ -423,10 +424,10 @@ header {
       }
     }
     .logoMobileTop{
-      display: none;
+      display: none!important;
     }
     .logoMobileScroll{
-      display: block;
+      display: block!important;
     }
     .tel {
       a {

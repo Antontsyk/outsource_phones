@@ -3672,6 +3672,7 @@ header {
   header {
     min-height: 350px;
     background: url("../images/headerFonMobile.jpg") 50% 50% no-repeat;
+    background-size: cover;
   }
 }
 header figure {
@@ -4046,10 +4047,10 @@ header .container .span1_2 .header_head p {
   color: #000;
 }
 .mobileHeader.whiteTop .logoMobileTop {
-  display: none;
+  display: none !important;
 }
 .mobileHeader.whiteTop .logoMobileScroll {
-  display: block;
+  display: block !important;
 }
 .mobileHeader.whiteTop .tel a {
   color: #000;

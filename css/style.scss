@@ -990,13 +990,22 @@ header.upakovka {
       border: none;
       border-bottom: 4px #62a748 solid;
       p {
+        @include breakpoint((max-width: 700px)) {
+          height: auto;
+        }
         color: #000;
         height: 45px;
       }
       .area_img {
+        @include breakpoint((max-width: 700px)) {
+          height: 70px;
+        }
         height: 135px;
       }
       .area_txt {
+        @include breakpoint((max-width: 700px)) {
+          line-height: 15px;
+        }
         display: block;
         color: #000;
       }

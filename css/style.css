@@ -4627,12 +4627,27 @@ header.upakovka .container .span1_2:last-child img {
   color: #000;
   height: 45px;
 }
+@media (max-width: 700px) {
+  .area .span3:hover p {
+    height: auto;
+  }
+}
 .area .span3:hover .area_img {
   height: 135px;
+}
+@media (max-width: 700px) {
+  .area .span3:hover .area_img {
+    height: 70px;
+  }
 }
 .area .span3:hover .area_txt {
   display: block;
   color: #000;
+}
+@media (max-width: 700px) {
+  .area .span3:hover .area_txt {
+    line-height: 15px;
+  }
 }
 .area .span3:active, .area .span3:focus {
   background: #dcdcdc;

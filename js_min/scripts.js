@@ -40,6 +40,9 @@ $(document).ready(function () {
             var reviews = $('.reviews');
             $('.reviews').remove();
             $('.sliderModileReview').append(reviews);
+            var cooperation = $('.cooperation');
+            $('.cooperation').remove();
+            $('.cooperationMobile').append(cooperation);
         }
 
         $('.header_mouse').click(function () {
@@ -51,15 +54,31 @@ $(document).ready(function () {
     $(window).scroll(function () {
         if($(window).scrollTop() > 1){
             $('.mobileHeader').addClass('white');
-            $('.mobileHeader .logoMobile img').attr('src', 'images/logoMobileScroll.png');
+            $('.mobileHeader .logoMobile .logoMobileTop').hide(0);
+            $('.mobileHeader .logoMobile .logoMobileScroll').show(0);
+            var serarchNav = $('.serarchNav').addClass('top');
+            $('.serarchNav').remove();
+            $('.mobileHeader').append(serarchNav);
         }else{
             $('.mobileHeader').removeClass('white');
-            $('.mobileHeader .logoMobile img').attr('src', 'images/logoMobile.png');
+            $('.mobileHeader .logoMobile .logoMobileTop').show(0);
+            $('.mobileHeader .logoMobile .logoMobileScroll').hide(0);
+            var serarchNav = $('.serarchNav').removeClass('top');
+            $('.serarchNav').remove();
+            $('.serarchNavContainer').append(serarchNav);
         }
     });
     $('.mobileHeader .btnNav').click(function () {
         $(this).parents('.mobileHeader').toggleClass('chowNavModile');
     });
+
+    $(window).click(function (event) {
+        var eventInMenu = $(event.target).parents('.mobileHeader');
+        if (!eventInMenu.length) {
+            $('.mobileHeader').removeClass('chowNavModile');
+        }
+    });
+
     $(function () {
         /*$('#main_header ul.menu').slicknav({
             prependTo: "#main_header",
@@ -71,6 +90,15 @@ $(document).ready(function () {
             slidesToShow: 1,
             slidesToScroll: 1,
             autoplay: true,
+            autoplaySpeed: 1000,
+            speed: 1000,
+            dots: true
+        });
+        $('.slider_phones').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            autoplay: true,
+            arrows: true,
             autoplaySpeed: 1000,
             speed: 1000,
             dots: true

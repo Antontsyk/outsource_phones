@@ -43,7 +43,8 @@
     <div class="mobileHeader">
         <div class="btnNav"></div>
         <div class="logoMobile">
-            <img src="images/logoMobile.png" alt="">
+            <img src="images/logoMobile.png" alt="" class="logoMobileTop">
+            <img src="images/logoMobileScroll.png" alt="" class="logoMobileScroll">
         </div>
         <div class="tel"><a href="tel:88005556455"> 8 800 555-64-55 </a></div>
         <div class="tnbPhone get_popup"></div>
@@ -53,15 +54,20 @@
                 <li><a href="/usluga.html">Услуги</a></li>
                 <li><a href="/zagotovki.html">Чехлы-заготовки для печати</a></li>
                 <li><a href="/upakovka.html">Подарочная упаковка</a></li>
-                <li class="serarchNav">
-                    <input type="text" placeholder="Поиск по сайту">
+                <li class="serarchNavContainer">
+                    <div class="serarchNav">
+                        <input type="text" placeholder="Поиск по сайту">
+                        <button class="searchBtn"><img
+                                src="data:image/png;base64,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"
+                                alt=""></button>
+                    </div>
                 </li>
             </ul>
         </div>
     </div>
-    <figure class="span3 wow bounceInLeft"><img src="images/logo.png" alt="logo"/></a>
+    <figure class="span3"><img src="images/logo.png" alt="logo"/></a>
     </figure>
-    <nav class="span3 wow bounceInLeft">
+    <nav class="span3">
         <ul class="menu">
             <li><a href="/">Главная</a></li>
             <li><a href="/usluga.html">Услуги</a></li>
@@ -69,7 +75,7 @@
             <li><a href="/upakovka.html">Подарочная упаковка</a></li>
         </ul>
     </nav>
-    <div class="head_contacts wow pulse center" data-wow-iteration="5" data-wow-duration="0.25s">
+    <div class="head_contacts center">
         <div><a href="tel:88005556455"> 8 800 555-64-55 </a></div>
         <div class="callback get_popup">Перезвонить мне</div>
     </div>
@@ -84,7 +90,7 @@
 </header>
 <section class="reviews">
     <div class="container no_hidden">
-        <div class="reviews_header wow shake" data-wow-iteration="1" data-wow-duration="0.25s">
+        <div class="reviews_header">
             <h2>что говорят наши клиенты</h2>
             <div class="reviews_line"></div>
         </div>
@@ -183,55 +189,56 @@
         </div>
     </div>
 </section>
-<section class="area" >
+<section class="area">
     <div class="container">
-        <div class="area_head wow pulse" data-wow-delay="0.5s" style="visibility: visible; animation-delay: 0.5s; animation-name: bounceInDown;">
+        <div class="area_head " style="visibility: visible; animation-delay: 0.5s; animation-name: bounceInDown;">
             <h2>На чем мы печатаем?</h2>
             <h3>почти на всем!</h3>
             <div class="area_line"></div>
         </div>
 
-        <div class="span3 wow bounceInLeft" data-wow-delay="0.5s">
+        <div class="span3">
             <div class="area_img"><img src="images/cases.png" alt=""/></div>
             <p>печать на чехлах</p>
             <div class="area_txt">Печать визиток на пластике, прорезиненой бумаге и на других твердых материалах</div>
         </div>
-        <div class="span3 wow bounceInLeft" data-wow-delay="0.3s">
+        <div class="span3">
             <div class="area_img"><img src="images/flash_2.png" alt=""></div>
             <p>печать на сувенирной продукции</p>
             <div class="area_txt">Печать визиток на пластике, прорезиненой бумаге и на других твердых материалах</div>
         </div>
-        <div class="span3 wow bounceInRight" data-wow-delay="0.3s">
+        <div class="span3">
             <div class="area_img"><img src="images/card.png" alt=""></div>
             <p>эксклюзивные визитки</p>
             <div class="area_txt">Печать визиток на пластике, прорезиненой бумаге и на других твердых материалах</div>
         </div>
-        <div class="span3 wow bounceInRight" data-wow-delay="0.5s">
+        <div class="span3">
             <div class="area_img"><img src="images/ball.png" alt=""></div>
             <p>Печать на круглых предметах</p>
             <div class="area_txt">Печать визиток на пластике, прорезиненой бумаге и на других твердых материалах</div>
         </div>
 
-        <div class="span3 wow bounceInLeft" data-wow-delay="0.5s">
+        <div class="span3">
             <div class="area_img"><img src="images/book.png" alt=""></div>
             <p>печать на блокнотах и ежедневниках</p>
             <div class="area_txt">Печать визиток на пластике, прорезиненой бумаге и на других твердых материалах</div>
         </div>
-        <div class="span3 wow bounceInLeft" data-wow-delay="0.3s">
+        <div class="span3">
             <div class="area_img"><img src="images/glass_2.png" alt=""></div>
             <p>печать на стекле и оргстекле</p>
             <div class="area_txt">Печать визиток на пластике, прорезиненой бумаге и на других твердых материалах</div>
         </div>
-        <div class="span3 wow bounceInRight" data-wow-delay="0.3s">
-            <div class="area_img"><img src="images/other.png" alt=""></div>
-            <p>нестандартные предметы</p>
-            <div class="area_txt">Печать визиток на пластике, прорезиненой бумаге и на других твердых материалах</div>
-        </div>
-        <div class="span3 wow bounceInRight" data-wow-delay="0.5s">
-            <div class="area_img"><img src="images/brush.png" alt=""></div>
-            <p>дизайн</p>
-            <div class="area_txt">Печать визиток на пластике, прорезиненой бумаге и на других твердых материалах</div>
-        </div>
+        <div class="span3"
+        ">
+        <div class="area_img"><img src="images/other.png" alt=""></div>
+        <p>нестандартные предметы</p>
+        <div class="area_txt">Печать визиток на пластике, прорезиненой бумаге и на других твердых материалах</div>
+    </div>
+    <div class="span3">
+        <div class="area_img"><img src="images/brush.png" alt=""></div>
+        <p>дизайн</p>
+        <div class="area_txt">Печать визиток на пластике, прорезиненой бумаге и на других твердых материалах</div>
+    </div>
 
     </div>
 </section>
@@ -241,33 +248,33 @@
             <h2>наши преимущества</h2>
             <div class="our_advantages_line"></div>
         </div>
-<div class="sliderRound">
-        <div class="span4"><img src="images/design.png" alt="" class="wow bounceInDown center" data-wow-delay="0.1s"/>
-            <p>Мы разрабатываем яркий и запоминающийся дизайн, учитывающий специфику работы вашей компании</p>
+        <div class="sliderRound">
+            <div class="span4"><img src="images/design.png" alt="" class=" center"/>
+                <p>Мы разрабатываем яркий и запоминающийся дизайн, учитывающий специфику работы вашей компании</p>
+            </div>
+            <div class="span4"><img src="images/case.png" alt="" class="center"/>
+                <p>Мы используем различные технологии нанесения. Чехол может быть матовым, глянцевым рельефным</p>
+            </div>
+            <div class="span4"><img src="images/color.png" alt="" class="center"/>
+                <p>Мы предоставляем бесплатный тестовый образец и всегда делаем цветопробу</p>
+            </div>
+            <div class="span4"><img src="images/phone.png" alt="" class="center"/>
+                <p>Мы можем включить в одну партию различные модели устройств, а также разные дизайн-макеты и произвести
+                    именные чехлы</p>
+            </div>
+            <div class="span4"><img src="images/cloud.png" alt="" class="center"/>
+                <p>Мы изготавливаем ультралегкие чехлы из soft-touch материала, которые точно повторяют форму мобильного
+                    устройства</p>
+            </div>
+            <div class="span4"><img src="images/money.png" alt="" class="center"/>
+                <p>Мы предлагаем систему накопительных скидок для постоянных клиентов</p>
+            </div>
         </div>
-        <div class="span4"><img src="images/case.png" alt="" class="wow bounceInDown center" data-wow-delay="0.3s"/>
-            <p>Мы используем различные технологии нанесения. Чехол может быть матовым, глянцевым рельефным</p>
-        </div>
-        <div class="span4"><img src="images/color.png" alt="" class="wow bounceInDown center" data-wow-delay="0.5s"/>
-            <p>Мы предоставляем бесплатный тестовый образец и всегда делаем цветопробу</p>
-        </div>
-        <div class="span4"><img src="images/phone.png" alt="" class="wow bounceInDown center" data-wow-delay="0.5s"/>
-            <p>Мы можем включить в одну партию различные модели устройств, а также разные дизайн-макеты и произвести
-                именные чехлы</p>
-        </div>
-        <div class="span4"><img src="images/cloud.png" alt="" class="wow bounceInDown center" data-wow-delay="0.3s"/>
-            <p>Мы изготавливаем ультралегкие чехлы из soft-touch материала, которые точно повторяют форму мобильного
-                устройства</p>
-        </div>
-        <div class="span4"><img src="images/money.png" alt="" class="wow bounceInDown center" data-wow-delay="0.1s"/>
-            <p>Мы предлагаем систему накопительных скидок для постоянных клиентов</p>
-        </div>
-</div>
     </div>
 </section>
 <section class="experience">
     <div class="container"><img src="images/image.png" alt="">
-        <div class="experience_head wow bounceInRight">
+        <div class="experience_head">
             <h2>компания с опытом</h2>
             <div class="experiance_line"></div>
             <p>Мы знаем как сделать так, чтоб люди говорили о вашей компании! Вы ищете подарки для сотрудников, клиентов
@@ -285,14 +292,14 @@
             <div class="cooperation_line"></div>
         </div>
         <div class="cooperation_block">
-            <div class="span6 wow bounceInUp" data-wow-delay="0.1s">
+            <div class="span6">
                 <p class="span6_head">рекламные агентства</p>
                 <div class="span6_txt">Теперь маленькие тиражи станут любимыми. С помощью УФ-печати можно сделать
                     полноцветное нанесение по цене одного цвета. Метод уф-нанесения является хорошей альтернативой
                     тампопечати и шелкографии.
                 </div>
             </div>
-            <div class="span6 wow bounceInDown" data-wow-delay="0.3s">
+            <div class="span6">
                 <p class="span6_head">типографии</p>
                 <div class="span6_txt">Хороший вариант для расширения своих услуг.С помощью УФ-печати можно предложить
                     своим клиентам нанесение на сувенирку и поэкспериментировать с материалами.
@@ -300,7 +307,7 @@
             </div>
         </div>
     </div>
-    <div class="callback get_popup wow shake">свяжитесь с нами</div>
+    <div class="callback get_popup">свяжитесь с нами</div>
 </section>
 <section class="novelty">
     <div class="container">
@@ -310,18 +317,21 @@
             <div class="novelty_line"></div>
             <h4>Удивите окружающих качественных силиконовым чехлом с полноцветной печатью</h4>
         </div>
-        <div class="span4 first">
-            <img src="images/silicon_1.png" alt="" class="wow shake" data-wow-iteration="2" data-wow-duration="0.2s">
-        </div>
-        <div class="span4">
-            <img src="images/silicon_2.png" alt="" class="wow shake" data-wow-iteration="2" data-wow-duration="0.2s" data-wow-delay="0.2s">
-        </div>
-        <div class="span4">
-            <img src="images/silicon_3.png" alt="" class="wow shake" data-wow-iteration="2" data-wow-duration="0.2s" data-wow-delay="0.4s">
+        <div class="slider_phones">
+            <div class="span4 first">
+                <img src="images/silicon_1.png" alt="">
+            </div>
+            <div class="span4">
+                <img src="images/silicon_2.png" alt="">
+            </div>
+            <div class="span4">
+                <img src="images/silicon_3.png" alt="">
+            </div>
         </div>
     </div>
-    <div class="callback_green get_popup wow bounceInDown center">заказать сейчас</div>
+    <div class="callback_green get_popup center">заказать сейчас</div>
 </section>
+<div class="cooperationMobile"></div>
 <section class="customers">
     <div class="container">
         <div class="customers_head">
@@ -370,8 +380,8 @@
                         </div>
                         <div class="span1_5" data-UrlForBigImage=7><img src="images/htc.png" alt="">
                         </div>
-                    <!--</div>
-                    <div class="slideItem">-->
+                        <!--</div>
+                        <div class="slideItem">-->
                         <div class="span1_5" data-UrlForBigImage=0><img src="images/htc.png" alt="">
                         </div>
                         <div class="span1_5" data-UrlForBigImage=1><img src="images/htc.png" alt="">
@@ -446,43 +456,43 @@
         </div>
     </div>
     <div class="work_block">
-        <div class="span2 wow bounceInUp center" data-wow-iteration="1" data-wow-duration="0.5s">
+        <div class="span2 center">
             <div class="dop_info"> Информация</div>
             <img src="images/work_1.jpg" alt=""/>
         </div>
-        <div class="span2 wow bounceInUp center" data-wow-iteration="1" data-wow-duration="0.5s" data-wow-delay="0.1s">
+        <div class="span2 center">
             <div class="dop_info"> Информация</div>
             <img src="images/work_2.jpg" alt=""/>
         </div>
-        <div class="span2 wow bounceInUp center" data-wow-iteration="1" data-wow-duration="0.5s" data-wow-delay="0.2s">
+        <div class="span2 center">
             <div class="dop_info"> Информация</div>
             <img src="images/work_3.jpg" alt=""/>
         </div>
-        <div class="span2 wow bounceInUp center" data-wow-iteration="1" data-wow-duration="0.5s" data-wow-delay="0.3s">
+        <div class="span2 center">
             <div class="dop_info"> Информация</div>
             <img src="images/work_4.jpg" alt=""/>
         </div>
-        <div class="span2 wow bounceInUp center" data-wow-iteration="1" data-wow-duration="0.5s" data-wow-delay="0.4s">
+        <div class="span2 center">
             <div class="dop_info"> Информация</div>
             <img src="images/work_5.jpg" alt=""/>
         </div>
-        <div class="span2 wow bounceInUp center" data-wow-iteration="1" data-wow-duration="0.5s" data-wow-delay="0.5s">
+        <div class="span2 center">
             <div class="dop_info"> Информация</div>
             <img src="images/work_6.jpg" alt=""/>
         </div>
-        <div class="span2 wow bounceInUp center" data-wow-iteration="1" data-wow-duration="0.5s" data-wow-delay="0.6s">
+        <div class="span2 center">
             <div class="dop_info"> Информация</div>
             <img src="images/work_7.jpg" alt=""/>
         </div>
-        <div class="span2 wow bounceInUp center" data-wow-iteration="1" data-wow-duration="0.5s" data-wow-delay="0.7s">
+        <div class="span2 center">
             <div class="dop_info"> Информация</div>
             <img src="images/work_8.jpg" alt=""/>
         </div>
-        <div class="span2 wow bounceInUp center" data-wow-iteration="1" data-wow-duration="0.5s" data-wow-delay="0.8s">
+        <div class="span2 center">
             <div class="dop_info"> Информация</div>
             <img src="images/work_9.jpg" alt=""/>
         </div>
-        <div class="span2 wow bounceInUp center" data-wow-iteration="1" data-wow-duration="0.5s" data-wow-delay="0.9s">
+        <div class="span2 center">
             <div class="dop_info"> Информация</div>
             <img src="images/work_10.jpg" alt=""/>
         </div>
@@ -499,7 +509,7 @@
             <h3>Мы с удовольствием ответим на них!</h3>
             <div class="questions_line"></div>
         </div>
-        <div class="questions_block wow lightSpeedIn">
+        <div class="questions_block">
             <img src="images/cup.png" alt="" class="questions_img_left"/>
             <form action="">
                 <input type="text" placeholder="Как вас зовут?">
@@ -524,5 +534,10 @@
         </div>
     </div>
 </footer>
-<script type="text/javascript" src="js_min/scripts.min.js"></script>
+
+<script type="text/javascript" src="js/1.jquery-1.12.3.min.js"></script>
+<script type="text/javascript" src="js/2.jquery.slicknav.min.js"></script>
+<script type="text/javascript" src="js/3.slick.min.js"></script>
+<script type="text/javascript" src="js/4.wow.min.js"></script>
+<script type="text/javascript" src="js/main_all.js"></script>
 </html>

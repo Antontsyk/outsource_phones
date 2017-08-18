@@ -348,27 +348,51 @@ header {
       }
     }
   }
+  .serarchNav {
+    width: 90%;
+    margin: 0 auto;
+    &.top{
+      width: 80%;
+      position: absolute;
+      right: 10px;
+      top: 2px;
+    }
+    input {
+      width: 80%;
+      float: left;
+      display: block;
+      border: solid 1px #d8d8d8;
+      border-radius: 5px;
+      border-bottom-right-radius: 0;
+      border-top-right-radius: 0;
+      padding: 12px 15px;
+    }
+
+    .searchBtn{
+      border-bottom-right-radius: 5px;
+      border-top-right-radius: 5px;
+      border: 0;
+      background: #ffbb33;
+      cursor: pointer;
+      outline: 0;
+      width: 20%;
+      float: right;
+      height: 44px;
+      img{
+        width: 26px;
+      }
+    }
+  }
   .gropUl {
     display: none;
     position: absolute;
-    top: 40px;
+    top: 48px;
     left: 0;
     width: 100%;
     background: #fff;
     padding: 10px 0 20px;
     ul {
       li {
-        &.serarchNav {
-          width: 100%;
-          input {
-            width: 90%;
-            margin: 0 auto;
-            display: block;
-            border: solid 1px #d8d8d8;
-            border-radius: 5px;
-            padding: 12px 15px;
-          }
-        }
         &.active {
           a {
             border-left: solid 2px #fb3;
@@ -394,7 +418,11 @@ header {
         color: #000;
       }
     }
+    .logoMobile{
+      display: none;
+    }
     .tel {
+      display: none;
       a {
         color: #000;
       }
@@ -407,10 +435,13 @@ header {
   top: 0;
   left: 0;
   z-index: 7;
-  .logoMobile {
+  .logoMobile{
     position: absolute;
     left: 50px;
     top: 11px;
+  }
+  .logoMobileScroll{
+    display: none;
   }
   .btnNav {
     display: block;
@@ -823,17 +854,25 @@ header.upakovka {
     padding-bottom: 120px;
     margin-bottom: -100px;
   }
-  @include breakpoint((max-width: 555px)) {
-    //padding-bottom: 270px;
-    //margin-bottom: -240px;
-    padding-top: 100px;
-    margin-top: -78px;
+  @include breakpoint((max-width: 700px)) {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    padding-top: 0;
+    margin-top: 0;
+    background: #313131;
   }
   background: url('../images/bg_black.png') 50% 50% no-repeat;
   background-size: cover;
   min-height: 929px;
   color: #fff;
   padding-top: 55px;
+  .container{
+    @include breakpoint((max-width: 700px)) {
+      background: url(../images/bg_black.png) no-repeat;
+      background-size: contain;
+      margin-top: -16px;
+    }
+  }
   .area_head {
     margin-bottom: 30px;
     h2 {
@@ -843,6 +882,9 @@ header.upakovka {
       margin-bottom: 15px;
     }
     h3 {
+      @include breakpoint((max-width: 700px)) {
+        font-size: 22px;
+      }
       font-size: 40px;
       text-transform: uppercase;
       margin-bottom: 20px;
@@ -983,6 +1025,9 @@ header.upakovka {
 }
 
 .experience {
+  @include breakpoint((max-width: 700px)) {
+    height: 682px;
+  }
   background: url('../images/bg_green.png') 50% 50% no-repeat;
   background-size: cover;
   height: 837px;
@@ -1123,15 +1168,25 @@ header.upakovka {
 }
 
 .novelty {
+  @include breakpoint((max-width: 700px)) {
+    padding-top: 205px;
+    min-height: 940px;
+  }
   background: url('../images/bg_gray.png') 50% 70% no-repeat;
   background-size: cover;
   min-height: 700px;
-  min-height: 1219px;
+  min-height: 1130px;
   margin-top: -270px;
   padding-top: 290px;
   z-index: 1;
   .container {
     overflow: hidden;
+  }
+  .slick-dots{
+    bottom: -35px;
+  }
+  .slick-dots li button:before{
+    border-radius: 50%;
   }
   .novelty_head {
     text-align: center;
@@ -1143,22 +1198,39 @@ header.upakovka {
       color: #62a748;
     }
     .novelty_line {
+      @include breakpoint((max-width: 700px)) {
+        margin-bottom: 10px;
+      }
       width: 45px;
       height: 4px;
       background: #62a748;
       margin: 0 auto 20px;
     }
     h3 {
+      @include breakpoint((max-width: 700px)) {
+        margin-bottom: 10px;
+        font-size: 18px;
+      }
       font-size: 24px;
       margin-bottom: 20px;
       text-transform: uppercase;
     }
     h4 {
+      @include breakpoint((max-width: 700px)) {
+        margin-bottom: 10px;
+      }
       font-size: 18px;
       margin-bottom: 50px;
     }
   }
   .callback_green {
+    @include breakpoint((max-width: 700px)) {
+      width: 85%;
+      padding-top: 0;
+      height: 44px;
+      line-height: 44px;
+      margin: 20px auto 0;
+    }
     background: #62a748;
     border-radius: 50px;
     width: 328px;
@@ -1182,6 +1254,12 @@ header.upakovka {
     @include breakpoint((max-width: 700px)) {
       width: 100%;
     }
+    img{
+      @include breakpoint((max-width: 700px)) {
+        width: 40%;
+        margin: 0 auto;
+      }
+    }
     @include span(4 of 12);
     text-align: center;
     &.first {
@@ -1199,6 +1277,9 @@ header.upakovka {
 }
 
 .customers {
+  @include breakpoint((max-width: 730px)) {
+    margin-top: 0;
+  }
   margin-top: -70px;
   .container {
     .customers_head {
@@ -1297,6 +1378,11 @@ header.upakovka {
         @include breakpoint((max-width: 1200px)) {
           display: none;
         }
+        @include breakpoint((max-width: 700px)) {
+          width: 100%;
+          display: block;
+          margin-top: -120px;
+        }
         position: relative;
         width: 30%;
         float: right;
@@ -1311,6 +1397,9 @@ header.upakovka {
           }
         }
         .block_hover {
+          @include breakpoint((max-width: 1200px)) {
+            display: none!important;
+          }
           z-index: 3;
           background: #f1ad2a;
           font-size: 24px;
@@ -1421,7 +1510,8 @@ header.upakovka {
     margin-top: 0;
     padding-top: 15px;
     background-size: inherit;
-    background: url(../images/bg_form.png) -496px -103px no-repeat;
+    min-height: 690px;
+    background: url(../images/bg_form.png) -496px -203px no-repeat;
   }
   background: url('../images/bg_form.png') 50% 50% no-repeat;
   background-size: cover;
@@ -1545,6 +1635,7 @@ footer {
     margin-top: -170px;
   }
   background: url('../images/bg_black.png') 50% 50% no-repeat;
+  background-color: #313131;
   background-size: cover;
   min-height: 190px;
   z-index: -1;
@@ -1558,6 +1649,11 @@ footer {
     line-height: 20px;
   }
   .footer_right {
+    @include breakpoint((max-width: 700px)) {
+      float: none;
+      text-align: center;
+      margin-top: 20px;
+    }
     float: right;
     a {
       display: block;
@@ -1926,7 +2022,7 @@ h2 {
     font-size: 27px !important;
   }
   @include breakpoint((max-width: 380px)) {
-    font-size: 25px !important;
+    font-size: 24px !important;
     margin-bottom: 10px !important;
     margin-top: 10px !important;
   }

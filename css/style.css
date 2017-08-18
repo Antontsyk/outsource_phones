@@ -3665,6 +3665,7 @@ header {
 @media (max-width: 730px) {
   header {
     min-height: 350px;
+    background: url("../images/headerFonMobile.jpg") 50% 50% no-repeat;
   }
 }
 header figure {

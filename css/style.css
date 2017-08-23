@@ -4400,6 +4400,7 @@ header.upakovka .container .span1_2:last-child img {
 @media (max-width: 600px) {
   .reviews {
     padding-top: 10px;
+    padding-bottom: 0;
   }
 }
 .reviews .no_hidden {
@@ -4434,17 +4435,29 @@ header.upakovka .container .span1_2:last-child img {
   background: #000;
   margin-bottom: 20px;
 }
+.reviews .no_hidden .reviews_slider .slick-dots li button:before {
+  border-radius: 50%;
+}
 .reviews .no_hidden .reviews_slider .item {
   display: inline-block;
   padding: 0 10px;
 }
+.reviews .no_hidden .reviews_slider .item .ico {
+  width: 80px;
+  height: 80px;
+  float: left;
+}
 .reviews .no_hidden .reviews_slider .item img {
-  width: 100%;
+  width: 80px;
+  height: 80px;
+  border-radius: 50px;
 }
 .reviews .no_hidden .reviews_slider .item .description {
   padding-top: 20px;
 }
 .reviews .no_hidden .reviews_slider .item .description .description_top {
+  width: calc(100% - 90px);
+  margin-left: 90px;
   border-bottom: 1px solid #d2d2d2;
   padding-bottom: 15px;
 }
@@ -4463,7 +4476,6 @@ header.upakovka .container .span1_2:last-child img {
   font-size: 24px;
 }
 .reviews .no_hidden .reviews_slider .item .description .description_top .span2_3 {
-  width: 60%;
   display: inline-block;
 }
 .reviews .no_hidden .reviews_slider .item .description .description_top .span2_3 h2 {

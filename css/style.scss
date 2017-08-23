@@ -790,6 +790,7 @@ header.upakovka {
 .reviews {
   @include breakpoint((max-width: 600px)) {
     padding-top: 10px;
+    padding-bottom: 0;
   }
   padding: 60px 0;
   .no_hidden {
@@ -822,15 +823,30 @@ header.upakovka {
       }
     }
     .reviews_slider {
+      .slick-dots{
+        //bottom: -40px;
+      }
+      .slick-dots li button:before {
+        border-radius: 50%;
+      }
       .item {
         display: inline-block;
         padding: 0 10px;
+        .ico{
+          width: 80px;
+          height: 80px;
+          float: left;
+        }
         img {
-          width: 100%;
+          width: 80px;
+          height: 80px;
+          border-radius: 50px;
         }
         .description {
           padding-top: 20px;
           .description_top {
+            width: calc(100% - 90px);
+            margin-left: 90px;
             border-bottom: 1px solid #d2d2d2;
             padding-bottom: 15px;
             .span1_3 {
@@ -848,7 +864,7 @@ header.upakovka {
               }
             }
             .span2_3 {
-              width: 60%;
+              //width: 60%;
               display: inline-block;
               h2 {
                 font-size: 20px;

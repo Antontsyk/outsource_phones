@@ -4435,6 +4435,9 @@ header.upakovka .container .span1_2:last-child img {
   background: #000;
   margin-bottom: 20px;
 }
+.reviews .no_hidden .reviews_slider .slick-dots {
+  bottom: -25px;
+}
 .reviews .no_hidden .reviews_slider .slick-dots li button:before {
   border-radius: 50%;
 }

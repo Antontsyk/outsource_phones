@@ -147,7 +147,17 @@ $(document).ready(function () {
             $('.sliderReviewsMain').slick({
                 slidesToShow: 2,
                 slidesToScroll: 2,
-                arrows: true
+                arrows: true,
+                dots: true,
+                responsive: [
+                    {
+                        breakpoint: 750,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1
+                        }
+                    }
+                ]
                 /*autoplay: true,
                  autoplaySpeed: 2000,*/
 

@@ -71,6 +71,7 @@ body {
 header {
   @include breakpoint((max-width: 830px)) {
     padding-left: 30px;
+    margin-top: 47px;
   }
   @include breakpoint((max-width: 730px)) {
     min-height: 350px;
@@ -359,6 +360,13 @@ header {
   }
   display: none;
   transition: 0.5s;
+  position: fixed;
+  height: 48px;
+  width: 100%;
+  background: #333;
+  top: 0;
+  left: 0;
+  z-index: 7;
   &.chowNavModile {
     .gropUl {
       display: block;
@@ -370,35 +378,37 @@ header {
     }
   }
   .serarchNav {
-    width: 90%;
-    margin: 0 auto;
+    width: 80%;
+    position: absolute;
+    right: -2px;
+    top: 55px;
+    transition: 0.5s;
     &.top {
       width: 80%;
       position: absolute;
-      right: 10px;
+      right: -2px;
       top: 2px;
     }
     input {
-      width: 80%;
-      float: left;
+      width: 100%;
       display: block;
       border: solid 1px #d8d8d8;
-      border-radius: 5px;
-      border-bottom-right-radius: 0;
-      border-top-right-radius: 0;
-      padding: 12px 15px;
+      border-radius: 60px;
+      padding: 9px 15px;
+      position: absolute;
+      right: 15px;
+      top: 2px;
     }
 
     .searchBtn {
-      border-bottom-right-radius: 5px;
-      border-top-right-radius: 5px;
+      position: absolute;
+      right: 30px;
       border: 0;
-      background: #ffbb33;
+      background: 0;
       cursor: pointer;
       outline: 0;
-      width: 20%;
-      float: right;
       height: 44px;
+      width: 30px;
       img {
         width: 26px;
       }
@@ -410,7 +420,7 @@ header {
     top: 48px;
     left: 0;
     width: 100%;
-    background: #fff;
+    background: #333;
     padding: 10px 0 20px;
     ul {
       li {
@@ -425,38 +435,22 @@ header {
           font-size: 18px;
           display: block;
           text-decoration: none;
-          color: #000;
+          color: #fff;
           font-family: 'Open Sans', Exo2;
         }
       }
     }
   }
   &.whiteTop {
-    background: #fff;
     box-shadow: 0 5px 13px rgba(0, 0, 0, 0.4);
-    .btnNav {
-      &:after {
-        color: #000;
-      }
-    }
-    .logoMobileTop {
-      display: none !important;
-    }
-    .logoMobileScroll {
-      display: block !important;
-    }
-    .tel {
-      a {
-        color: #000;
-      }
-    }
   }
   &.white {
-    background: #fff;
+    background: #333;
     box-shadow: 0 5px 13px rgba(0, 0, 0, 0.4);
     .btnNav {
+      top: 11px;
       &:after {
-        color: #000;
+        //color: #000;
       }
     }
     .logoMobile {
@@ -469,13 +463,6 @@ header {
       }
     }
   }
-  position: fixed;
-  height: 48px;
-  width: 100%;
-  background: transparent;
-  top: 0;
-  left: 0;
-  z-index: 7;
   .logoMobile {
     position: absolute;
     left: 50px;
@@ -488,7 +475,7 @@ header {
     display: block;
     position: absolute;
     left: 13px;
-    top: 12px;
+    top: 64px;
     &:after {
       content: '\2630';
       color: #fff;
@@ -1008,6 +995,9 @@ header.upakovka {
       border-bottom: solid 1px #333;
     }
     ul {
+      @include breakpoint((max-width: 920px)) {
+        width: 100%;
+      }
       @include breakpoint((max-width: 520px)) {
         width: inherit;
       }

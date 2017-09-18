@@ -55,17 +55,17 @@ $(document).ready(function () {
         if($(window).scrollTop() > 1){
             $('.mobileHeader').addClass('white');
             $('.mobileHeader .logoMobile .logoMobileTop').hide(0);
-            $('.mobileHeader .logoMobile .logoMobileScroll').show(0);
             var serarchNav = $('.serarchNav').addClass('top');
-            $('.serarchNav').remove();
-            $('.mobileHeader').append(serarchNav);
+            /*$('.serarchNav').remove();
+            $('.mobileHeader').append(serarchNav);*/
         }else{
             $('.mobileHeader').removeClass('white');
+            /*$('.mobileHeader .logoMobile .logoMobileScroll').show(0);*/
             $('.mobileHeader .logoMobile .logoMobileTop').show(0);
-            $('.mobileHeader .logoMobile .logoMobileScroll').hide(0);
+            /*$('.mobileHeader .logoMobile .logoMobileScroll').hide(0);*/
             var serarchNav = $('.serarchNav').removeClass('top');
-            $('.serarchNav').remove();
-            $('.serarchNavContainer').append(serarchNav);
+            /*$('.serarchNav').remove();
+            $('.serarchNavContainer').append(serarchNav);*/
         }
     });
     $('.mobileHeader .btnNav').click(function () {

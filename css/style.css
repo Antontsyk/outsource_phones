@@ -3703,6 +3703,7 @@ header {
 @media (max-width: 830px) {
   header {
     padding-left: 30px;
+    margin-top: 47px;
   }
 }
 @media (max-width: 730px) {
@@ -4018,7 +4019,7 @@ header .container .span1_2 .header_head p {
   position: fixed;
   height: 48px;
   width: 100%;
-  background: transparent;
+  background: #333;
   top: 0;
   left: 0;
   z-index: 7;
@@ -4035,35 +4036,37 @@ header .container .span1_2 .header_head p {
   content: '\2716';
 }
 .mobileHeader .serarchNav {
-  width: 90%;
-  margin: 0 auto;
+  width: 80%;
+  position: absolute;
+  right: -2px;
+  top: 55px;
+  transition: 0.5s;
 }
 .mobileHeader .serarchNav.top {
   width: 80%;
   position: absolute;
-  right: 10px;
+  right: -2px;
   top: 2px;
 }
 .mobileHeader .serarchNav input {
-  width: 80%;
-  float: left;
+  width: 100%;
   display: block;
   border: solid 1px #d8d8d8;
-  border-radius: 5px;
-  border-bottom-right-radius: 0;
-  border-top-right-radius: 0;
-  padding: 12px 15px;
+  border-radius: 60px;
+  padding: 9px 15px;
+  position: absolute;
+  right: 15px;
+  top: 2px;
 }
 .mobileHeader .serarchNav .searchBtn {
-  border-bottom-right-radius: 5px;
-  border-top-right-radius: 5px;
+  position: absolute;
+  right: 30px;
   border: 0;
-  background: #ffbb33;
+  background: 0;
   cursor: pointer;
   outline: 0;
-  width: 20%;
-  float: right;
   height: 44px;
+  width: 30px;
 }
 .mobileHeader .serarchNav .searchBtn img {
   width: 26px;
@@ -4074,7 +4077,7 @@ header .container .span1_2 .header_head p {
   top: 48px;
   left: 0;
   width: 100%;
-  background: #fff;
+  background: #333;
   padding: 10px 0 20px;
 }
 .mobileHeader .gropUl ul li.active a {
@@ -4086,31 +4089,18 @@ header .container .span1_2 .header_head p {
   font-size: 18px;
   display: block;
   text-decoration: none;
-  color: #000;
+  color: #fff;
   font-family: 'Open Sans', Exo2;
 }
 .mobileHeader.whiteTop {
-  background: #fff;
   box-shadow: 0 5px 13px rgba(0, 0, 0, 0.4);
-}
-.mobileHeader.whiteTop .btnNav:after {
-  color: #000;
-}
-.mobileHeader.whiteTop .logoMobileTop {
-  display: none !important;
-}
-.mobileHeader.whiteTop .logoMobileScroll {
-  display: block !important;
-}
-.mobileHeader.whiteTop .tel a {
-  color: #000;
 }
 .mobileHeader.white {
-  background: #fff;
+  background: #333;
   box-shadow: 0 5px 13px rgba(0, 0, 0, 0.4);
 }
-.mobileHeader.white .btnNav:after {
-  color: #000;
+.mobileHeader.white .btnNav {
+  top: 11px;
 }
 .mobileHeader.white .logoMobile {
   display: none;
@@ -4133,7 +4123,7 @@ header .container .span1_2 .header_head p {
   display: block;
   position: absolute;
   left: 13px;
-  top: 12px;
+  top: 64px;
 }
 .mobileHeader .btnNav:after {
   content: '\2630';
@@ -4657,6 +4647,11 @@ header.upakovka .container .span1_2:last-child img {
 .area_main .tabs_main ul {
   width: 1170px;
   margin: 0 auto -1px;
+}
+@media (max-width: 920px) {
+  .area_main .tabs_main ul {
+    width: 100%;
+  }
 }
 @media (max-width: 520px) {
   .area_main .tabs_main ul {

@@ -89,18 +89,19 @@ $(document).ready(function () {
         $('.work_block').slick({
             slidesToShow: 1,
             slidesToScroll: 1,
-            autoplay: true,
+            arrows: false,
+            /*autoplay: true,
             autoplaySpeed: 1000,
-            speed: 1000,
+            speed: 1000,*/
             dots: true
         });
         $('.slider_phones').slick({
             slidesToShow: 1,
             slidesToScroll: 1,
-            autoplay: true,
             arrows: true,
+            /*autoplay: true,
             autoplaySpeed: 1000,
-            speed: 1000,
+            speed: 1000,*/
             dots: true
         });
         $('.sliderRound').slick({

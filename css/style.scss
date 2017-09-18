@@ -69,6 +69,9 @@ body {
 }
 
 header {
+  @include breakpoint((max-width: 830px)) {
+    padding-left: 30px;
+  }
   @include breakpoint((max-width: 730px)) {
     min-height: 350px;
     background: url('../images/headerFonMobile.jpg') 50% 50% no-repeat;
@@ -182,16 +185,16 @@ header {
     }
   }
   .head_middle {
-    @include breakpoint((max-width: 860px)) {
-      right: 10px;
+    @include breakpoint((max-width: 830px)) {
+      left: 0;
       left: inherit;
     }
     @include breakpoint((max-width: 570px)) {
-      padding-left: 25px;
       margin-top: 0;
       width: 100%;
       letter-spacing: -1pt;
       top: 197px;
+      left: 0;
     }
     position: absolute;
     top: 50%;
@@ -203,6 +206,7 @@ header {
         font-size: 30px;
         line-height: 35px;
         margin-bottom: 10px;
+        padding-left: 25px;
       }
       font-size: 44px;
       font-family: Exo2-Black;
@@ -216,6 +220,9 @@ header {
         margin-bottom: 0;
         border-right: 0;
         display: block;
+      }
+      @include breakpoint((max-width: 570px)) {
+        padding-left: 25px;
       }
       color: #fff;
       font-size: 20px;
@@ -234,7 +241,7 @@ header {
         height: 44px;
         line-height: 44px;
         font-size: 15px;
-        width: 98%;
+
       }
       background: #fb3;
       border-radius: 60px;
@@ -827,11 +834,17 @@ header.upakovka {
       bottom: -30px;
     }
     .slick-next{
+      @include breakpoint((max-width: 750px)) {
+        right: 5px;
+      }
       right: 35px;
       background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAYCAYAAACSuF9OAAABS2lUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4KPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS42LWMxMzggNzkuMTU5ODI0LCAyMDE2LzA5LzE0LTAxOjA5OjAxICAgICAgICAiPgogPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4KICA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIi8+CiA8L3JkZjpSREY+CjwveDp4bXBtZXRhPgo8P3hwYWNrZXQgZW5kPSJyIj8+IEmuOgAAAPlJREFUSInN1z0vBUEUBuBnEUQjJCrixu9Rqm95ax8lpajVdG5JSUdIqEgUFBTiZygkWIXdhHEKiut4k6m22Cc5OzvvMNh0cIa5Ab/nR5nFA2rcYyYTM4TrBtOuW0xnohbxXKCuMJmJWsJLgbrARCaqG6BOMJ6J6uGtQB1hNBO1XIBqHGA4E7UeoPo+dmVaNgPULioYwWMCqm4BTXp4wmrVPPwv2UqdXZC6kjOyBV9HBttYS7CEH/WO78A/yUaA2cvCrASYfUk/xujoOJR0dHTxWmCOMZaBierHuaT6ERW0S0kFLaqwN5jKwLT5XPLvJJf8NvM49Ytr0DugwGCnDEeFrQAAAABJRU5ErkJggg==') no-repeat;
       background-size: contain;
     }
     .slick-prev{
+      @include breakpoint((max-width: 750px)) {
+        left: 5px;
+      }
       left: 35px;
       background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAYCAYAAACSuF9OAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTM4IDc5LjE1OTgyNCwgMjAxNi8wOS8xNC0wMTowOTowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgV2luZG93cyIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo0RkNBRkM1Njk3MkYxMUU3ODAzNkMzMjZBNDlFMjFCMSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo0RkNBRkM1Nzk3MkYxMUU3ODAzNkMzMjZBNDlFMjFCMSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjRGQ0FGQzU0OTcyRjExRTc4MDM2QzMyNkE0OUUyMUIxIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjRGQ0FGQzU1OTcyRjExRTc4MDM2QzMyNkE0OUUyMUIxIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+t7p5BgAAAPNJREFUeNrMlz0PAUEURRcJohESFeEHKdVKtdVSUlPTUVLSERIqEgUFhcLvkPi6k+wkk5cpNHLfTU6yyRZ7MjO7724Q/J4S2IBKoCAFcAUfcANFpkwenCMZyxHEGTJZcBAyD1BlyGTATsg8QY0hkwYrj0ydIZMECyHzBg2GTALMhIyhyZAxb83EI9NmyMTAyCPTZYiYDEAo7hmhO2N1ep6VoRGPLtTEblkftLRsmRUbajjUUmrskeowpcyHceqRCplSZnTMtYwOmxRYCqkXa7i69WOrpX64BW2vpaDZ5MBJS4V1S/5FS8l3f4PWoPzPh3wFGAA7CIKSWE7LoAAAAABJRU5ErkJggg==') no-repeat;
       background-size: contain;
@@ -995,9 +1008,16 @@ header.upakovka {
       border-bottom: solid 1px #333;
     }
     ul {
+      @include breakpoint((max-width: 520px)) {
+        width: inherit;
+      }
       width: 1170px;
       margin: 0 auto -1px;
       li {
+        @include breakpoint((max-width: 520px)) {
+          width: 100%;
+          text-align: center;
+        }
         display: inline-block;
         cursor: pointer;
         padding: 10px;

@@ -85,7 +85,7 @@ header {
   padding-left: 350px;
   position: relative;
   figure {
-    @include breakpoint((max-width: 700px)) {
+    @include breakpoint((max-width: 830px)) {
       display: none;
     }
     float: left;
@@ -103,7 +103,7 @@ header {
     float: left;
     font-size: 14px;
     .menu {
-      @include breakpoint((max-width: 680px)) {
+      @include breakpoint((max-width: 830px)) {
         display: none;
       }
       margin-top: 5px;
@@ -237,12 +237,14 @@ header {
       }
     }
     .callback_free {
+      @include breakpoint((max-width: 830px)) {
+        margin-top: 25px;
+      }
       @include breakpoint((max-width: 560px)) {
         margin: 40px auto 0;
         height: 44px;
         line-height: 44px;
         font-size: 15px;
-
       }
       background: #fb3;
       border-radius: 60px;
@@ -349,11 +351,13 @@ header {
     }
   }
 }
-.nav_left{
+
+.nav_left {
   @include breakpoint((max-width: 830px)) {
     display: none;
   }
 }
+
 .mobileHeader {
   @include breakpoint((max-width: 830px)) {
     display: block;
@@ -372,6 +376,7 @@ header {
       display: block;
     }
     .btnNav {
+      top: 11px;
       &:after {
         content: '\2716';
       }
@@ -422,8 +427,53 @@ header {
     width: 100%;
     background: #333;
     padding: 10px 0 20px;
-    ul {
+    ul.navTop {
+      margin-left: 0;
+      padding-left: 9px;
+      border-bottom: solid 1px #8e9095;
+      padding-bottom: 10px;
+      margin-bottom: 13px;
       li {
+        display: block;
+        width: 100%;
+        clear: both;
+        height: 44px;
+        &.first {
+          display: none;
+        }
+        .img {
+          width: 40px;
+          height: 44px;
+          margin-right: 11px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          float: left;
+          img {
+
+          }
+        }
+        a {
+          display: inline-block;
+          font-weight: bold;
+          color: #fff;
+          text-decoration: none;
+          font-size: 13px;
+          line-height: 44px;
+          &:hover {
+            color: #fb3;
+          }
+        }
+      }
+    }
+    ul.navBottom {
+      border-bottom: solid 1px #8e9095;
+      padding-bottom: 10px;
+      margin-bottom: 13px;
+      li {
+        &.first{
+          display: none;
+        }
         &.active {
           a {
             border-left: solid 2px #fb3;
@@ -443,6 +493,9 @@ header {
   }
   &.whiteTop {
     box-shadow: 0 5px 13px rgba(0, 0, 0, 0.4);
+    .logoMobile {
+      display: none;
+    }
   }
   &.white {
     background: #333;
@@ -465,7 +518,7 @@ header {
   }
   .logoMobile {
     position: absolute;
-    left: 50px;
+    left: 14px;
     top: 11px;
   }
   .logoMobileScroll {
@@ -809,18 +862,18 @@ header.upakovka {
     }
   }
   .sliderReviewsMain {
-    .slick-next, .slick-prev{
+    .slick-next, .slick-prev {
       width: 36px;
       height: 24px;
       z-index: 999;
-      &:before{
+      &:before {
         content: '';
       }
     }
     .slick-dots {
       bottom: -30px;
     }
-    .slick-next{
+    .slick-next {
       @include breakpoint((max-width: 750px)) {
         right: 5px;
       }
@@ -828,7 +881,7 @@ header.upakovka {
       background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAYCAYAAACSuF9OAAABS2lUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4KPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS42LWMxMzggNzkuMTU5ODI0LCAyMDE2LzA5LzE0LTAxOjA5OjAxICAgICAgICAiPgogPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4KICA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIi8+CiA8L3JkZjpSREY+CjwveDp4bXBtZXRhPgo8P3hwYWNrZXQgZW5kPSJyIj8+IEmuOgAAAPlJREFUSInN1z0vBUEUBuBnEUQjJCrixu9Rqm95ax8lpajVdG5JSUdIqEgUFBTiZygkWIXdhHEKiut4k6m22Cc5OzvvMNh0cIa5Ab/nR5nFA2rcYyYTM4TrBtOuW0xnohbxXKCuMJmJWsJLgbrARCaqG6BOMJ6J6uGtQB1hNBO1XIBqHGA4E7UeoPo+dmVaNgPULioYwWMCqm4BTXp4wmrVPPwv2UqdXZC6kjOyBV9HBttYS7CEH/WO78A/yUaA2cvCrASYfUk/xujoOJR0dHTxWmCOMZaBierHuaT6ERW0S0kFLaqwN5jKwLT5XPLvJJf8NvM49Ytr0DugwGCnDEeFrQAAAABJRU5ErkJggg==') no-repeat;
       background-size: contain;
     }
-    .slick-prev{
+    .slick-prev {
       @include breakpoint((max-width: 750px)) {
         left: 5px;
       }
@@ -1033,7 +1086,7 @@ header.upakovka {
       position: relative;
       height: 200px;
       float: left;
-      img{
+      img {
         position: absolute;
         left: 0;
         top: 0;
@@ -1424,7 +1477,7 @@ header.upakovka {
 .novelty {
   @include breakpoint((max-width: 700px)) {
     padding-top: 205px;
-    min-height: 940px;
+    min-height: 910px;
   }
   background: url('../images/bg_gray.png') 50% 70% no-repeat;
   background-size: cover;
@@ -1564,7 +1617,7 @@ header.upakovka {
       display: flex;
       align-items: center;
       justify-content: center;
-      img{
+      img {
         width: 90%;
       }
     }
@@ -1726,19 +1779,24 @@ header.upakovka {
 
 .work {
   background: #62a748;
+  @include breakpoint((max-width: 830px)) {
+    background: 0;
+  }
   @include breakpoint((max-width: 630px)) {
     padding-top: 0;
+  }
+  @include breakpoint((max-width: 630px)) {
+    margin-top: -70px;
   }
   .slick-dots li button:before {
     border-radius: 50%;
   }
   .container {
     .work_head {
-      padding-bottom: 30px;
-      @include breakpoint((max-width: 400px)) {
-        padding-bottom: 0;
-      }
       h2 {
+        @include breakpoint((max-width: 830px)) {
+          color: #000;
+        }
         font-size: 40px;
         font-family: Exo2-Black;
         margin-bottom: 20px;
@@ -1747,10 +1805,19 @@ header.upakovka {
         padding-top: 30px;
       }
       .work_line {
+        @include breakpoint((max-width: 830px)) {
+          background: #000;
+        }
         width: 45px;
         height: 4px;
         background: #fff;
       }
+
+      padding-bottom: 30px;
+      @include breakpoint((max-width: 400px)) {
+        padding-bottom: 0;
+      }
+
     }
   }
   .work_block {
@@ -2492,7 +2559,7 @@ dop_service_line,
   left: 0;
   top: 0;
   bottom: 0;
-  ul {
+  ul.navTop {
     margin-left: 20px;
     li {
       display: block;

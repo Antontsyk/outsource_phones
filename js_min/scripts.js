@@ -34,9 +34,11 @@ $(document).ready(function () {
 
     $(function () {
         var allHeight = $(window).height();
-        if ($(window).width() > 700) {
+        if ($(window).width() > 830) {
             $('#main_header').css('min-height', allHeight);
         }else{
+            var itemsNavMobile = $('.nav_left ul.navTop');
+            $('.gropUl').prepend(itemsNavMobile);
             /*var reviews = $('.reviews');
             $('.reviews').remove();
             $('.sliderModileReview').append(reviews);

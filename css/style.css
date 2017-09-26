@@ -4673,10 +4673,11 @@ header.upakovka .container .span1_2:last-child img {
 }
 
 .area_main {
-  margin: 40px 0 90px;
+  margin: 83px 0 90px;
 }
 .area_main .area_head {
-  margin-bottom: 30px;
+  margin-bottom: 19px;
+  padding-left: 12px;
 }
 .area_main .area_head h2 {
   font-size: 40px;
@@ -4687,7 +4688,8 @@ header.upakovka .container .span1_2:last-child img {
 .area_main .area_head h3 {
   font-size: 40px;
   text-transform: uppercase;
-  margin-bottom: 20px;
+  margin-bottom: 9px;
+  letter-spacing: -2px;
 }
 @media (max-width: 700px) {
   .area_main .area_head h3 {
@@ -4703,11 +4705,14 @@ header.upakovka .container .span1_2:last-child img {
   width: 100%;
 }
 .area_main .tabs_main .tabs_ul {
-  border-bottom: solid 1px #333;
+  border-bottom: solid 1px rgba(158, 158, 158, 0.19);
+  margin-top: -2px;
+  margin-bottom: 8px;
 }
 .area_main .tabs_main ul {
   width: 1170px;
   margin: 0 auto -1px;
+  padding-left: 19px;
 }
 @media (max-width: 920px) {
   .area_main .tabs_main ul {
@@ -4720,9 +4725,11 @@ header.upakovka .container .span1_2:last-child img {
   }
 }
 .area_main .tabs_main ul li {
+  text-transform: uppercase;
   display: inline-block;
   cursor: pointer;
   padding: 10px;
+  padding-bottom: 16px;
 }
 @media (max-width: 520px) {
   .area_main .tabs_main ul li {
@@ -4741,6 +4748,7 @@ header.upakovka .container .span1_2:last-child img {
   position: relative;
   height: 200px;
   float: left;
+  margin-bottom: 19px;
 }
 @media (max-width: 1190px) {
   .area_main .tabs_main .item {

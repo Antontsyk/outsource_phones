@@ -2557,8 +2557,43 @@ dop_service_line,
     }
   }
 }
+.uslugi_btn_nav{
+  display: block;
+  width: 100%;
+  clear: both;
+  height: 44px;
+  left: 20px;
+  top: 32px;
+  position: absolute;
+  &.first {
+    margin-bottom: 6px;
+  }
+  .img {
+    width: 40px;
+    height: 44px;
+    margin-right: 11px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: left;
+    img {
 
+    }
+  }
+  a {
+    display: inline-block;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+    line-height: 44px;
+    &:hover {
+      color: #fb3;
+    }
+  }
+}
 .nav_left {
+  overflow: hidden;
   padding-top: 32px;
   background: #333;
   width: 300px;

@@ -6404,7 +6404,47 @@ footer .footer_right div {
   cursor: pointer;
 }
 
+.uslugi_btn_nav {
+  display: block;
+  width: 100%;
+  clear: both;
+  height: 44px;
+  left: 20px;
+  top: 32px;
+  position: absolute;
+}
+.uslugi_btn_nav.first {
+  margin-bottom: 6px;
+}
+.uslugi_btn_nav .img {
+  width: 40px;
+  height: 44px;
+  margin-right: 11px;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  float: left;
+}
+.uslugi_btn_nav a {
+  display: inline-block;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+  font-size: 13px;
+  line-height: 44px;
+}
+.uslugi_btn_nav a:hover {
+  color: #fb3;
+}
+
 .nav_left {
+  overflow: hidden;
   padding-top: 32px;
   background: #333;
   width: 300px;

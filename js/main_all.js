@@ -4,7 +4,7 @@ $(document).ready(function () {
         var allHeight = $(window).height();
         if ($(window).width() > 830) {
             $('#main_header').css('min-height', allHeight);
-        }else{
+        } else {
             var itemsNavMobile = $('.nav_left ul.navTop');
             $('.gropUl').prepend(itemsNavMobile);
             /*var reviews = $('.reviews');
@@ -21,14 +21,55 @@ $(document).ready(function () {
             }, 700);
         });
     });
+    $(function () {
+        $('.navTop .first').click(function () {
+            $(this).animate({
+                opacity: 0
+            }, 300, function () {
+                // Animation complete.
+            });
+            $('.uslugi_btn_nav').animate({
+                opacity: 1,
+                left: 20
+            }, 300, function () {
+                // Animation complete.
+            });
+            $('.nav_left').animate({
+                opacity: 0.25,
+                left: -310
+            }, 300, function () {
+                // Animation complete.
+            })
+        });
+
+        $('.uslugi_btn_nav').click(function () {
+            $(this).animate({
+                opacity: 0,
+                left: -300
+            }, 300, function () {
+                // Animation complete.
+            });
+            $('.navTop .first').animate({
+                opacity: 1
+            }, 300, function () {
+                // Animation complete.
+            });
+            $('.nav_left').animate({
+                opacity: 1,
+                left: 0
+            }, 300, function () {
+                // Animation complete.
+            });
+        })
+    })
     $(window).scroll(function () {
-        if($(window).scrollTop() > 1){
+        if ($(window).scrollTop() > 1) {
             $('.mobileHeader').addClass('white');
             $('.mobileHeader .logoMobile .logoMobileTop').hide(0);
             var serarchNav = $('.serarchNav').addClass('top');
             /*$('.serarchNav').remove();
             $('.mobileHeader').append(serarchNav);*/
-        }else{
+        } else {
             $('.mobileHeader').removeClass('white');
             /*$('.mobileHeader .logoMobile .logoMobileScroll').show(0);*/
             $('.mobileHeader .logoMobile .logoMobileTop').show(0);
@@ -114,7 +155,7 @@ $(document).ready(function () {
              autoplaySpeed: 2000,*!/
 
         });*/
-        if($('.sliderReviewsMain').length){
+        if ($('.sliderReviewsMain').length) {
             $('.sliderReviewsMain').slick({
                 slidesToShow: 2,
                 slidesToScroll: 2,

@@ -86,9 +86,9 @@ header {
     min-height: 600px;
     padding-bottom: 0;
     position: relative;
-    margin-top: 150px;
     .head_middle{
       @extend %clear;
+      margin-top: 150px;
       position: relative;
       left: inherit;
       top: inherit;

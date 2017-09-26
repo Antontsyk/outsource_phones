@@ -3722,9 +3722,9 @@ header#page_header {
   min-height: 600px;
   padding-bottom: 0;
   position: relative;
-  margin-top: 150px;
 }
 header#page_header .head_middle {
+  margin-top: 150px;
   position: relative;
   left: inherit;
   top: inherit;

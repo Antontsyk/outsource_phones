@@ -6413,6 +6413,9 @@ footer .footer_right div {
   top: 32px;
   position: absolute;
 }
+.uslugi_btn_nav:hover {
+  cursor: pointer;
+}
 .uslugi_btn_nav.first {
   margin-bottom: 6px;
 }
@@ -6465,6 +6468,9 @@ footer .footer_right div {
 }
 .nav_left ul.navTop li.first {
   margin-bottom: 6px;
+}
+.nav_left ul.navTop li.first:hover {
+  cursor: pointer;
 }
 .nav_left ul.navTop li .img {
   width: 40px;

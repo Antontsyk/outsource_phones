@@ -2565,6 +2565,9 @@ dop_service_line,
   left: 20px;
   top: 32px;
   position: absolute;
+  &:hover{
+    cursor: pointer;
+  }
   &.first {
     margin-bottom: 6px;
   }
@@ -2611,6 +2614,9 @@ dop_service_line,
       height: 44px;
       &.first {
         margin-bottom: 6px;
+        &:hover{
+          cursor: pointer;
+        }
       }
       .img {
         width: 40px;

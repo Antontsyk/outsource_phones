@@ -3629,7 +3629,10 @@ th {
   box-sizing: border-box;
 }
 
-.sec_tabs .tabs .tab_content:after, .sec_tabs .tabs .tab_content .span1_4:after, .area .span3:after, .our_advantages .span4:after, .cooperation:after, .cooperation .cooperation_block:after, .cooperation .cooperation_block .span6:after, .work .work_block:after, .box_cases .box_cases_content .span1_2:last-child img:after {
+header#page_header .head_middle, .sec_tabs .tabs .tab_content, .sec_tabs .tabs .tab_content .span1_4, .area .span3, .our_advantages .span4, .cooperation, .cooperation .cooperation_block, .cooperation .cooperation_block .span6, .work .work_block, .box_cases .box_cases_content .span1_2:last-child img {
+  clear: both;
+}
+header#page_header .head_middle:after, .sec_tabs .tabs .tab_content:after, .sec_tabs .tabs .tab_content .span1_4:after, .area .span3:after, .our_advantages .span4:after, .cooperation:after, .cooperation .cooperation_block:after, .cooperation .cooperation_block .span6:after, .work .work_block:after, .box_cases .box_cases_content .span1_2:last-child img:after, header#page_header .head_middle:before, .sec_tabs .tabs .tab_content:before, .sec_tabs .tabs .tab_content .span1_4:before, .area .span3:before, .our_advantages .span4:before, .cooperation:before, .cooperation .cooperation_block:before, .cooperation .cooperation_block .span6:before, .work .work_block:before, .box_cases .box_cases_content .span1_2:last-child img:before {
   content: '';
   display: block;
   clear: both;
@@ -3712,6 +3715,38 @@ header {
     background: url("../images/headerFonMobile.jpg") 50% 50% no-repeat;
     background-size: cover;
   }
+}
+header#page_header {
+  background: url(../images/bg.jpg) 50% 50% no-repeat;
+  background-size: cover;
+  min-height: 600px;
+  padding-bottom: 0;
+  position: relative;
+  margin-top: 150px;
+}
+header#page_header .head_middle {
+  position: relative;
+  left: inherit;
+  top: inherit;
+  -webkit-transform: inherit;
+      -ms-transform: inherit;
+          transform: inherit;
+}
+header#page_header .head_middle .backToMaim {
+  color: #fff;
+  text-decoration: none;
+  position: relative;
+  font-size: 13px;
+  font-weight: bold;
+  text-transform: initial;
+}
+header#page_header .head_middle .backToMaim:before {
+  content: '\2039';
+  position: absolute;
+  left: -25px;
+  color: #fff;
+  font-size: 40px;
+  top: -16px;
 }
 header figure {
   float: left;
@@ -6412,6 +6447,11 @@ footer .footer_right div {
   left: 20px;
   top: 32px;
   position: absolute;
+}
+@media (max-width: 830px) {
+  .uslugi_btn_nav {
+    display: none;
+  }
 }
 .uslugi_btn_nav:hover {
   cursor: pointer;

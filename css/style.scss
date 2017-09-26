@@ -18,7 +18,9 @@ $susy: (columns: 12, container: 1170px, gutters: 1/10, global-box-sizing: border
 $ell: #ffcc00;
 $ser: #a8acc0;
 %clear {
-  &:after {
+  clear: both;
+  &:after,
+  &:before{
     content: '';
     display: block;
     clear: both;
@@ -78,6 +80,38 @@ header {
     background: url('../images/headerFonMobile.jpg') 50% 50% no-repeat;
     background-size: cover;
   }
+  &#page_header {
+    background: url(../images/bg.jpg) 50% 50% no-repeat;
+    background-size: cover;
+    min-height: 600px;
+    padding-bottom: 0;
+    position: relative;
+    margin-top: 150px;
+    .head_middle{
+      @extend %clear;
+      position: relative;
+      left: inherit;
+      top: inherit;
+      transform: inherit;
+      .backToMaim{
+        color: #fff;
+        text-decoration: none;
+        position: relative;
+        font-size: 13px;
+        font-weight: bold;
+        text-transform: initial;
+        &:before{
+          content: '\2039';
+          position: absolute;
+          left: -25px;
+          color: #fff;
+          font-size: 40px;
+          top: -16px;
+        }
+      }
+    }
+  }
+
   background: url('../images/BG_all.jpg') 50% 50% no-repeat;
   background-size: cover;
   min-height: 896px;
@@ -471,7 +505,7 @@ header {
       padding-bottom: 10px;
       margin-bottom: 13px;
       li {
-        &.first{
+        &.first {
           display: none;
         }
         &.active {
@@ -2557,7 +2591,11 @@ dop_service_line,
     }
   }
 }
-.uslugi_btn_nav{
+
+.uslugi_btn_nav {
+  @include breakpoint((max-width: 830px)) {
+    display: none;
+  }
   display: block;
   width: 100%;
   clear: both;
@@ -2565,7 +2603,7 @@ dop_service_line,
   left: 20px;
   top: 32px;
   position: absolute;
-  &:hover{
+  &:hover {
     cursor: pointer;
   }
   &.first {
@@ -2595,6 +2633,7 @@ dop_service_line,
     }
   }
 }
+
 .nav_left {
   overflow: hidden;
   padding-top: 32px;
@@ -2614,7 +2653,7 @@ dop_service_line,
       height: 44px;
       &.first {
         margin-bottom: 6px;
-        &:hover{
+        &:hover {
           cursor: pointer;
         }
       }

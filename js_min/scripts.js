@@ -348,4 +348,12 @@ $(document).ready(function () {
         $(this).find('.dop_info').slideToggle();
     });
 
+    $(function () {
+        $('.request .left ul').on('mouseover', 'li', function () {
+            $('.request .left ul li').removeClass('active');
+            $(this).addClass('active');
+            $('.request .right .text_res').html($(this).html());
+        });
+    })
+
 });
